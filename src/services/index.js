@@ -1,3 +1,5 @@
-export handleLoginSuccess from './modules/login-success'
-
+import handleLoginSuccess from './modules/login-success'
+export {
+    handleLoginSuccess
+}
 
