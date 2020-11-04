@@ -1,0 +1,29 @@
+.app__navbar {
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  width: 80%;
+}
+
+.app__logo {
+  text-transform: uppercase;
+}
+
+.app__icon {
+  margin-right: 5px;
+  transform: translateY(-2px);
+}
+
+.app__navbar-link {
+  text-transform: uppercase;
+  margin: 0px 15px;
+}
+
+.nav__button--login {
+  color: #fff;
+  outline: #fff solid 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
