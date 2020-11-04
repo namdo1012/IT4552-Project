@@ -1,11 +1,12 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {Demo} from "./screens/demo";
+import { LandingPage } from './screens/landing';
 
 function App() {
   return (
     <>
-      <Demo/>
+      <LandingPage />
     </>
   );
 }
