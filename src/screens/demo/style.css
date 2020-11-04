@@ -1,8 +1,5 @@
-@value colors: "../../style/colors.css";
-@value blue, red, green from colors;
-
 .demo{
     align-items: center;
-    background-color: red;
+    background-color: pink;
     justify-content: center;
 }
