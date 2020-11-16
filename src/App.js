@@ -1,13 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { LandingPage } from './screens/landing';
+import {Course} from "./screens/course";
+import {DetailCourse} from "./screens/detailCourse";
 
 function App() {
   return (
-    <>
-      <LandingPage />
-    </>
+        <DetailCourse/>
   );
 }
 
