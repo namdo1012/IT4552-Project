@@ -1,8 +1,13 @@
 .landing__home {
   width: 100vw;
   height: 100vh;
-  background-image:  linear-gradient(to right bottom, rgba(242,122,84,.7), rgba(161,84,242,.7)), url('./img/hero-img.jpg');
-  background-size: cover; 
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(242, 122, 84, 0.7),
+      rgba(161, 84, 242, 0.7)
+    ),
+    url("../img/hero-img.jpg");
+  background-size: cover;
   position: relative;
 }
 
@@ -32,6 +37,6 @@
 
 .header__button {
   padding: 8px 50px;
-  color: #ED4C5C;
+  color: #ed4c5c;
   border-radius: 10px;
 }
