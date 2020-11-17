@@ -29,7 +29,7 @@ const Item = ({ title, filter, onClick, id }) => {
     <button
       id={id}
       type="button"
-      class="list-group-item list-group-item-action"
+      className="list-group-item list-group-item-action"
       style={{ backgroundColor: title === filter ? "#5BFF7F" : "" }}
       onClick={onClick}
     >
@@ -42,19 +42,43 @@ const Filter = () => {
   const [filter, setFilter] = useState("");
 
   return (
-    <div className="col-sm-3">
-      <div className="card">
-        <div className="card-header">Featured</div>
-        <div className="list-group list-group-flush">
-          {list.map((item) => (
-            <Item
-              title={item.data}
-              onClick={() => setFilter(item.data)}
-              filter={filter}
-              id={item.id}
-            />
-          ))}
+    <div className="col-sm-3 rounded bg-light p-4">
+      <div className="dropdown mb-2">
+        <button
+          className="btn btn-secondary dropdown-toggle w-100"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Tất cả
+        </button>
+        <div
+          className="dropdown-menu dropdown-menu-lg-right"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <a className="dropdown-item" href="#">
+            Action
+          </a>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+          <a className="dropdown-item" href="#">
+            Something else here
+          </a>
         </div>
+      </div>
+      <div className="list-group list-group-flush">
+        {list.map((item) => (
+          <Item
+            title={item.data}
+            onClick={() => setFilter(item.data)}
+            filter={filter}
+            id={item.id}
+            key={item.id}
+          />
+        ))}
       </div>
     </div>
   );
