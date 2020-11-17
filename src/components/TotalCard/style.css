@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    background-color: #525464;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.dot {
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 20px;
+}
