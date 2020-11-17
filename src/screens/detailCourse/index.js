@@ -20,11 +20,11 @@ export const DetailCourse = () => {
 
                         {listLesson.map(item =>
                             <div style={{marginBottom: 50}}>
-                                <div style={{flexDirection: 'row',}}>
+                                <div style={{flexDirection: 'row'}}>
                                     <div className="item-small-dot"/>
-                                    <span style={{color: 'white', fontSize: 25}}>{item.title}</span>
+                                    <span className="txt-lesson">{item.title}</span>
                                 </div>
-                                <div style={{flexDirection: 'row', marginLeft: 70, marginTop: 30}}>
+                                <div className="ctn-process">
                                     <div className="item-dot"/>
                                     <div className="item-dot"/>
                                     <div className="item-dot"/>

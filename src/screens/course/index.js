@@ -40,19 +40,11 @@ export const Course = () => {
 
                         <ListGroup style={{paddingBottom: 100}}>
                             {listCourse.map(item =>
-                                <ListGroup.Item style={{
-                                    marginTop: 20, flexDirection: 'row', display: 'flex',
-                                    justifyContent: 'space-between'
-                                }}>{item.name}
+                                <ListGroup.Item className="ctn-list-group">{item.name}
                                     <ProgressBar now={60} label={`${60}%`}
                                                  className="item-progressBar"
                                     />
-                                    <span style={{
-                                        color: '#F27A54',
-                                        fontWeight: 'bold',
-                                        fontSize: 24,
-                                        transform: 'translateY(-6px)'
-                                    }}>27%</span>
+                                    <span className="percent-process">27%</span>
 
                                 </ListGroup.Item>
                             )}
