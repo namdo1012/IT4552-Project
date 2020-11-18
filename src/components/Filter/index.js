@@ -42,7 +42,7 @@ const Filter = () => {
   const [filter, setFilter] = useState("");
 
   return (
-    <div className="col-sm-3 rounded bg-light p-4">
+    <div className="col-sm-3 rounded p-4">
       <div className="dropdown mb-2">
         <button
           className="btn btn-secondary dropdown-toggle w-100"
