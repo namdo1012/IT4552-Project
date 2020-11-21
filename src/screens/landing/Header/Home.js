@@ -4,7 +4,7 @@ import "./Home.css";
 
 export const Home = () => {
   return (
-    <div className="landing__home app__section">
+    <div className="landing__home">
       <NavBar />
       <div className="header__content-box">
         <div className="header__hero-box">

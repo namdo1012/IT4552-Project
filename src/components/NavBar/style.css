@@ -1,7 +1,9 @@
 .app__navbar {
   background-color: transparent;
   top: 30px;
+  margin: 0 auto;
   width: 80%;
+  overflow: hidden;
 }
 
 .app__logo {
@@ -24,5 +26,3 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-
-
