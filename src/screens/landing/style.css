@@ -1,8 +1,8 @@
 .landing__container {
   position: relative;
-  color: #fff;
+  color: #000;
 }
 
-.app__section {
-  padding: 0px 150px;
+.landing__section {
+  padding: 100px 150px;
 }
