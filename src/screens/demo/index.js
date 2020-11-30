@@ -1,26 +1,28 @@
 import React,{ useState, useEffect } from 'react'
-import { useDispatch,useSelector } from 'react-redux'
-import {handleLoginSuccess} from '../../services'
-import {loginSuccess} from '../../states/actions/user'
 import './style.css'
+import {dbN5, getDataLesson} from "../../services/firebase/tutorial.service";
 
 export const Demo = () => {
-    const dispatch = useDispatch()
-    const {userInfor} = useSelector(state => state.user) // get state from store
+    const [dataLesson,setDataLesson] = useState(null);
 
-    console.log('fdasfaf',userInfor)
-    useEffect(() => {
-        handleLoginSuccess.getUser().then(
-            res => {
-                const data = res.data.results
-                dispatch(loginSuccess(data)) //dispatch action
-            }
-        )
-    },[])
+    const btnDataLesson = () => {
+        getDataLesson('N5','Lesson1','Grammar',setDataLesson)
+    }
 
     return(
-        <div className="demo">
-            <p>Demo page</p>
+        <div >
+            <button onClick={() =>btnDataLesson()}>
+                getDataLesson
+            </button>
+            {dataLesson !== null ? <p>{dataLesson?.grammar1.title}</p> : null}
+
+            <br/>
+
+            <button onClick={() =>btnDataLesson()}>
+                getDataLesson
+            </button>
+            {dataLesson !== null ? <p>{dataLesson?.grammar1.title}</p> : null}
+
         </div>
     )
 }
