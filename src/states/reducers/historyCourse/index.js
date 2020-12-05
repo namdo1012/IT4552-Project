@@ -1,15 +1,16 @@
-import {LOGIN_SUCCESS} from "../../actions/user/types";
+import {STORE_HISTORY} from "../../actions/historyCourse/types";
 
 const myState = {
-    userInfor : []
+    history : {}
 }
 
 export default (state = myState,{payload,type}) => {
     switch (type) {
-        case  LOGIN_SUCCESS :
+        case  STORE_HISTORY :
+            console.log('dissss')
             return {
                 ...state,
-                userInfor: payload
+                history: payload
             }
         default : return state
     }

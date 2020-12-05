@@ -16,6 +16,13 @@ export const getDataLesson =  (course,lesson,typeLesson,callback) => {
     )
 }
 
+export const addNewLesson = (idUser,course,lesson) => {
+    let db = firebase.doc(`User/${idUser}/History/${course}`)
+    db.update({
+        [lesson] : [0,1,2]
+    })
+}
+
 
 
 
