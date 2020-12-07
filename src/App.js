@@ -6,7 +6,7 @@ import {Demo} from "./screens/demo";
 import {Course} from "./screens/course";
 import {DetailCourse} from "./screens/detailCourse";
 import {Router, Route, Switch, BrowserRouter} from "react-router-dom";
-import {Temp} from "./screens/testCourse/tmpScreen";
+import {Temp} from "./screens/lessons/tmpLesson";
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
 import {NavBar} from "../../components/NavBar";
 import './style.css'
 import {Button, ProgressBar, ListGroup} from 'react-bootstrap'
@@ -6,13 +6,14 @@ import {ProcessCard} from '../../components/ProcessCard'
 import {TotalCard} from "../../components/TotalCard";
 import firebase from "../../services/firebase/firebase";
 import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {storeHistory} from "../../states/actions/historyCourse";
 
 
 export const Course = () => {
-    const [course,setCourse] = useState('N1')
-    const [less,setLess] = useState(null)
+    const [course, setCourse] = useState('N1')
+    const [less, setLess] = useState(null)
+    const {history} = useSelector(state => state.history)
     const dispatch = useDispatch();
     const level = [
         // {id: 1, name: 'N5'},
@@ -35,7 +36,7 @@ export const Course = () => {
             doc => {
                 if (doc.exists) {
                     let data = doc.data();
-                    console.log('have',course,data)
+                    console.log('have', course, data)
                     setLess(data)
                     dispatch(storeHistory(data))
                 } else {
@@ -68,23 +69,24 @@ export const Course = () => {
                     <div className="ctn-sub-list-course">
                         <p className="txt-title">DANH SÁCH BUỔI HỌC</p>
 
-                        <ListGroup style={{paddingBottom: 100}} >
+                        <ListGroup style={{paddingBottom: 100}}>
                             {listCourse.map(item =>
                                 <Link to={{
                                     pathname: `/course/${course}/${item.id}`,
                                     state: {
-                                        stateCourse:course,
-                                        stateLesson:item.id,
-                                        nameLesson:item.name
+                                        stateCourse: course,
+                                        stateLesson: item.id,
+                                        nameLesson: item.name
                                     }
                                 }}
                                       key={item.id}
                                 >
-                                    <ListGroup.Item className="ctn-list-group" >{item.name}
-                                        <ProgressBar now={less?less[item.id]?.process:0} label={`${less?less[item.id]?.process:0}%`}
+                                    <ListGroup.Item className="ctn-list-group">{item.name}
+                                        <ProgressBar now={history[item.id]?.process}
+                                                     label={`${history[item.id]?.process}%`}
                                                      className="item-progressBar"
                                         />
-                                        <span className="percent-process">{less?less[item.id]?.process:0}%</span>
+                                        <span className="percent-process">{history[item.id]?.process}%</span>
 
                                     </ListGroup.Item>
                                 </Link>
