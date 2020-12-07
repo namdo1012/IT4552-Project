@@ -1,6 +1,7 @@
 import React from "react";
 
-export const Index = ({doneLesson}) => {
+export const Test = ({doneLesson,dataLesson}) => {
+    console.log('data lesson',dataLesson)
     return(
         <button onClick={doneLesson}>Test</button>
     )
