@@ -11,10 +11,12 @@ export const Grammar = ({propsNavi},props) => {
 
     const doneGrammar = () => {
         let db = firebase.doc(`User/yEso5mELSggRpO0qGT5o/History/${stateCourse}`)
-        dispatch(addLesson({lesson:stateLesson,id:idLesson}))
-        if (!dataHistory) db.update({
+        dataHistory.push(idLesson);
+        db.update({
             [stateLesson] : {data:dataHistory,process:(dataHistory.length/7).toFixed(2)}
-        })
+        }).then(
+            dispatch(addLesson({lesson:stateLesson,id:idLesson}))
+        )
     }
 
     const updateFB = () => {

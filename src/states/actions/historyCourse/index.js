@@ -8,7 +8,7 @@ export const storeHistory = (payload) => {
 }
 
 
-export const addLesson = (payload) => {
+export const addLesson =  (payload) => {
     return {
         type: ADD_HISTORY,
         payload
