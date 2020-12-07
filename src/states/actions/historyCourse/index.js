@@ -1,4 +1,4 @@
-import {STORE_HISTORY} from "./types";
+import {STORE_HISTORY,ADD_HISTORY} from "./types";
 
 export const storeHistory = (payload) => {
     return {
@@ -6,3 +6,12 @@ export const storeHistory = (payload) => {
         payload
     }
 }
+
+
+export const addLesson = (payload) => {
+    return {
+        type: ADD_HISTORY,
+        payload
+    }
+}
+
