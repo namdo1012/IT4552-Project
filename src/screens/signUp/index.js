@@ -1,6 +1,7 @@
 import './style.css';
 import { NavBar_Sign } from '../../components/NavBar_Sign';
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import React from "react";
 
 export const SignUpPage = () => {
   return (

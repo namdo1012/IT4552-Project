@@ -1,6 +1,7 @@
 import './style.css';
 import { NavBar_Sign } from '../../components/NavBar_Sign';
 import { MdKeyboardArrowRight } from "react-icons/md"
+import React from "react";
 
 export const SignInPage = () => {
   return (

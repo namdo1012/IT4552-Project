@@ -4,6 +4,7 @@ import { Features } from "./Features";
 import { Description } from "./Description";
 import { Stats } from "./Stats";
 import { Footer } from "../../components/Footer";
+import React from "react";
 
 export const LandingPage = () => {
   return (
