@@ -16,9 +16,9 @@ export const Course = () => {
     const {history} = useSelector(state => state.history)
     const dispatch = useDispatch();
     const level = [
-        // {id: 1, name: 'N5'},
-        // {id: 2, name: 'N4'},
-        // {id: 3, name: 'N3'},
+        {id: 1, name: 'N5'},
+        {id: 2, name: 'N4'},
+        {id: 3, name: 'N3'},
         {id: 4, name: 'N2'},
         {id: 5, name: 'N1'}
     ]
@@ -30,7 +30,7 @@ export const Course = () => {
         {id: 'L5', name: 'Buổi học số 5'},
     ]
     const getProcess = (btnCourse) => {
-        setCourse(btnCourse)
+        setCourse(btnCourse) // lay name N5,N4...
         const db = firebase.doc(`/User/yEso5mELSggRpO0qGT5o/History/${course}`)
         db.get().then(
             doc => {
