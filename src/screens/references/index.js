@@ -1,37 +1,9 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./style.css";
 import Filter from "../../components/Filter";
 import { NavBar } from "../../components/NavBar";
 import DocumentCard from "../../components/DocumentCard";
-import image from "../../assets/references/MinannoNihongo.jpg";
-
-const documents = [
-  {
-    id: 1,
-    title: "Ngữ Pháp 50 Bài Minanno Nigongo",
-    cover: image,
-  },
-  {
-    id: 2,
-    title: "Ngữ Pháp 50 Bài Minanno Nigongo",
-    cover: image,
-  },
-  {
-    id: 3,
-    title: "Ngữ Pháp 50 Bài Minanno Nigongo",
-    cover: image,
-  },
-  {
-    id: 4,
-    title: "Ngữ Pháp 50 Bài Minanno Nigongo",
-    cover: image,
-  },
-  {
-    id: 5,
-    title: "Ngữ Pháp 50 Bài Minanno Nigongo",
-    cover: image,
-  },
-];
+import firebase from "../../services/firebase/firebase";
 
 const listFilter = [
   {
@@ -39,24 +11,52 @@ const listFilter = [
     data: 'Tất cả'
   },
   {
-    id: 'news',
-    data: "Bản tin tiếng Nhật",
+    id: 'kanji',
+    data: "Tài liệu Kanji, chữ Hán",
   },
   {
-    id: 'music',
-    data: "Video nhạc Nhật",
+    id: 'choukai',
+    data: "Tài liệu luyện nghe",
   },
   {
-    id: 'talkshow',
-    data: "Talkshow tiếng Nhật",
+    id: 'dokkai',
+    data: "Tài liệu đọc hiểu",
   },
   {
-    id: 'anime',
-    data: "Phim Anime, hoạt hình",
+    id: 'bunpou',
+    data: "Tài liệu ngữ pháp",
   }
 ]
 
 const References = () => {
+  const [references,setReferences] = useState([]);
+  const [checkReferences,setCheckReferences] = useState([]);
+
+  const getReferences= () => {
+    let db = firebase.doc(`References/All`)
+    db.get().then(
+        doc => {
+          if (doc.exists) {
+            let data = doc.data()['documents'];
+            setReferences(data)
+            setCheckReferences(data)
+          } else {
+            // doc.data() will be undefined in this case
+            console.log('no data')
+          }
+        }
+    )
+  }
+
+  const setStateFilter = (typeCheck) => {
+    let tmp = [...checkReferences.filter(item => item.type === typeCheck)]
+    typeCheck === 'all' ? setReferences(checkReferences) : setReferences(tmp)
+  }
+
+  useEffect(() => {
+    getReferences();
+  },[])
+
   return (
     <div>
       {/* Navbar */}
@@ -65,14 +65,15 @@ const References = () => {
       {/* References */}
       <div className="container-fluid references">
         <div className="row">
-          <Filter listFilter={listFilter}/>
+          <Filter listFilter={listFilter} setStateFilter={(typeCheck) => setStateFilter(typeCheck)}/>
           <div className="col-sm-9 p-4">
             <div className="row row-cols-2">
-              {documents.map((document) => (
+              {references?.map((item) => (
                 <DocumentCard
-                  key={document.id}
-                  title={document.title}
-                  cover={document.cover}
+                  key={item?.id}
+                  title={item?.title}
+                  cover={item?.cover}
+                  linkDownload={item?.url}
                 />
               ))}
             </div>

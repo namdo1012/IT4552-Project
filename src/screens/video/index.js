@@ -5,41 +5,39 @@ import { NavBar } from "../../components/NavBar";
 import VideoCard from "../../components/VideoCard";
 import firebase from "../../services/firebase/firebase";
 
+const listFilter = [
+  {
+    id: 'all',
+    data: 'Tất cả'
+  },
+  {
+    id: 'news',
+    data: "Bản tin tiếng Nhật",
+  },
+  {
+    id: 'music',
+    data: "Video nhạc Nhật",
+  },
+  {
+    id: 'talkshow',
+    data: "Talkshow tiếng Nhật",
+  },
+  {
+    id: 'anime',
+    data: "Phim Anime, hoạt hình",
+  }
+]
 
 const Video = () => {
   const [videos,setVideos] = useState([]);
   const [checkVideos,setCheckVideos] = useState([]);
 
-  const listFilter = [
-    {
-      id: 'all',
-      data: 'Tất cả'
-    },
-    {
-      id: 'news',
-      data: "Bản tin tiếng Nhật",
-    },
-    {
-      id: 'music',
-      data: "Video nhạc Nhật",
-    },
-    {
-      id: 'talkshow',
-      data: "Talkshow tiếng Nhật",
-    },
-    {
-      id: 'anime',
-      data: "Phim Anime, hoạt hình",
-    }
-  ]
-
-  const getDataLesson = () => {
+  const getVideos = () => {
     let db = firebase.doc(`Video/All`)
     db.get().then(
         doc => {
           if (doc.exists) {
             let data = doc.data()['videos'];
-            console.log('data',data)
             setVideos(data)
             setCheckVideos(data)
           } else {
@@ -53,11 +51,10 @@ const Video = () => {
   const setStateFilter = (typeCheck) => {
     let tmp = [...checkVideos.filter(item => item.type === typeCheck)]
     typeCheck === 'all' ? setVideos(checkVideos) : setVideos(tmp)
-    console.log('videos',videos)
   }
 
   useEffect(() => {
-    getDataLesson();
+    getVideos();
   },[])
 
   return (

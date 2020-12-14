@@ -7,22 +7,19 @@ import {Course} from "./screens/course";
 import {DetailCourse} from "./screens/detailCourse";
 import {Router, Route, Switch, BrowserRouter} from "react-router-dom";
 import {Temp} from "./screens/lessons/tmpLesson";
-import Video from "./screens/video";
-import References from "./screens/references";
 
 function App() {
-  return (
-    <>
-        {/*<BrowserRouter>*/}
-        {/*    <Switch>*/}
-        {/*        <Route exact path="/course" component={Course}/>*/}
-        {/*        <Route exact path="/course/:stateCourse/:id" component={DetailCourse}/>*/}
-        {/*        <Route exact path="/course/:stateCourse/:id/:typeLesson" component={Temp}/>*/}
-        {/*    </Switch>*/}
-        {/*</BrowserRouter>*/}
-        <References/>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/course" component={Course}/>
+                    <Route exact path="/course/:stateCourse/:id" component={DetailCourse}/>
+                    <Route exact path="/course/:stateCourse/:id/:typeLesson" component={Temp}/>
+                </Switch>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
