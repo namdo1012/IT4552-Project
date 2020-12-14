@@ -15,7 +15,7 @@ export const Temp = (props) => {
     const [dataLesson,setDataLesson] = useState(null);
 
     const done = () => {
-        let db = firebase.doc(`User/yEso5mELSggRpO0qGT5o/History/${stateCourse}`)
+        let db = firebase.doc(`User/abcxyz/History/${stateCourse}`)
         let tmp = [...dataHistory, idLesson]
         let updateProcess = parseFloat((tmp.length / 8 * 100).toFixed(2))
         db.update({

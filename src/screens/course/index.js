@@ -31,7 +31,7 @@ export const Course = () => {
     ]
     const getProcess = (btnCourse) => {
         setCourse(btnCourse) // lay name N5,N4...
-        const db = firebase.doc(`/User/yEso5mELSggRpO0qGT5o/History/${course}`)
+        const db = firebase.doc(`/User/abcxyz/History/${course}`)
         db.get().then(
             doc => {
                 if (doc.exists) {
