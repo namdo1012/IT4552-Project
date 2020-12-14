@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
 
-const list = [
-  {
-    id: 1,
-    data: "Tài liệu Kanji, chữ Hán",
-  },
-  {
-    id: 2,
-    data: "Tài liệu luyện nghe",
-  },
-  {
-    id: 3,
-    data: "Tài liệu đọc hiểu",
-  },
-  {
-    id: 4,
-    data: "Tài liệu ngữ pháp",
-  },
-  {
-    id: 5,
-    data: "Tài liệu từ vựng",
-  },
-];
-
 const Item = ({ title, filter, onClick, id }) => {
   return (
     <button
@@ -39,7 +16,7 @@ const Item = ({ title, filter, onClick, id }) => {
 };
 
 const Filter = ({listFilter,setStateFilter}) => {
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState("Tất cả");
 
   const combineFilter = (id,data) => {
     setStateFilter(id)
@@ -57,22 +34,8 @@ const Filter = ({listFilter,setStateFilter}) => {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Tất cả
+          Lựa chọn
         </button>
-        {/*<div*/}
-        {/*  className="dropdown-menu dropdown-menu-lg-right"*/}
-        {/*  aria-labelledby="dropdownMenuButton"*/}
-        {/*>*/}
-        {/*  <a className="dropdown-item" href="#">*/}
-        {/*    Action*/}
-        {/*  </a>*/}
-        {/*  <a className="dropdown-item" href="#">*/}
-        {/*    Another action*/}
-        {/*  </a>*/}
-        {/*  <a className="dropdown-item" href="#">*/}
-        {/*    Something else here*/}
-        {/*  </a>*/}
-        {/*</div>*/}
       </div>
       <div className="list-group list-group-flush">
         {listFilter.map((item) => (

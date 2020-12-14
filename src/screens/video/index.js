@@ -12,6 +12,10 @@ const Video = () => {
 
   const listFilter = [
     {
+      id: 'all',
+      data: 'Tất cả'
+    },
+    {
       id: 'news',
       data: "Bản tin tiếng Nhật",
     },
@@ -26,7 +30,7 @@ const Video = () => {
     {
       id: 'anime',
       data: "Phim Anime, hoạt hình",
-    },
+    }
   ]
 
   const getDataLesson = () => {
@@ -48,7 +52,7 @@ const Video = () => {
 
   const setStateFilter = (typeCheck) => {
     let tmp = [...checkVideos.filter(item => item.type === typeCheck)]
-    setVideos(tmp)
+    typeCheck === 'all' ? setVideos(checkVideos) : setVideos(tmp)
     console.log('videos',videos)
   }
 

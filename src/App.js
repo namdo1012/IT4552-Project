@@ -8,6 +8,7 @@ import {DetailCourse} from "./screens/detailCourse";
 import {Router, Route, Switch, BrowserRouter} from "react-router-dom";
 import {Temp} from "./screens/lessons/tmpLesson";
 import Video from "./screens/video";
+import References from "./screens/references";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         {/*        <Route exact path="/course/:stateCourse/:id/:typeLesson" component={Temp}/>*/}
         {/*    </Switch>*/}
         {/*</BrowserRouter>*/}
-        <Video/>
+        <References/>
     </>
   );
 }

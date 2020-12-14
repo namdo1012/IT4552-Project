@@ -33,6 +33,29 @@ const documents = [
   },
 ];
 
+const listFilter = [
+  {
+    id: 'all',
+    data: 'Tất cả'
+  },
+  {
+    id: 'news',
+    data: "Bản tin tiếng Nhật",
+  },
+  {
+    id: 'music',
+    data: "Video nhạc Nhật",
+  },
+  {
+    id: 'talkshow',
+    data: "Talkshow tiếng Nhật",
+  },
+  {
+    id: 'anime',
+    data: "Phim Anime, hoạt hình",
+  }
+]
+
 const References = () => {
   return (
     <div>
@@ -42,7 +65,7 @@ const References = () => {
       {/* References */}
       <div className="container-fluid references">
         <div className="row">
-          <Filter />
+          <Filter listFilter={listFilter}/>
           <div className="col-sm-9 p-4">
             <div className="row row-cols-2">
               {documents.map((document) => (
