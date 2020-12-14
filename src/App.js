@@ -9,17 +9,17 @@ import {Router, Route, Switch, BrowserRouter} from "react-router-dom";
 import {Temp} from "./screens/lessons/tmpLesson";
 
 function App() {
-  return (
-    <>
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/course" component={Course}/>
-                <Route exact path="/course/:stateCourse/:id" component={DetailCourse}/>
-                <Route exact path="/course/:stateCourse/:id/:typeLesson" component={Temp}/>
-            </Switch>
-        </BrowserRouter>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/course" component={Course}/>
+                    <Route exact path="/course/:stateCourse/:id" component={DetailCourse}/>
+                    <Route exact path="/course/:stateCourse/:id/:typeLesson" component={Temp}/>
+                </Switch>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
