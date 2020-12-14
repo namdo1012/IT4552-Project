@@ -38,8 +38,13 @@ const Item = ({ title, filter, onClick, id }) => {
   );
 };
 
-const Filter = () => {
+const Filter = ({listFilter,setStateFilter}) => {
   const [filter, setFilter] = useState("");
+
+  const combineFilter = (id,data) => {
+    setStateFilter(id)
+    setFilter(data)
+  }
 
   return (
     <div className="col-sm-3 rounded p-4">
@@ -54,26 +59,26 @@ const Filter = () => {
         >
           Tất cả
         </button>
-        <div
-          className="dropdown-menu dropdown-menu-lg-right"
-          aria-labelledby="dropdownMenuButton"
-        >
-          <a className="dropdown-item" href="#">
-            Action
-          </a>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-          <a className="dropdown-item" href="#">
-            Something else here
-          </a>
-        </div>
+        {/*<div*/}
+        {/*  className="dropdown-menu dropdown-menu-lg-right"*/}
+        {/*  aria-labelledby="dropdownMenuButton"*/}
+        {/*>*/}
+        {/*  <a className="dropdown-item" href="#">*/}
+        {/*    Action*/}
+        {/*  </a>*/}
+        {/*  <a className="dropdown-item" href="#">*/}
+        {/*    Another action*/}
+        {/*  </a>*/}
+        {/*  <a className="dropdown-item" href="#">*/}
+        {/*    Something else here*/}
+        {/*  </a>*/}
+        {/*</div>*/}
       </div>
       <div className="list-group list-group-flush">
-        {list.map((item) => (
+        {listFilter.map((item) => (
           <Item
             title={item.data}
-            onClick={() => setFilter(item.data)}
+            onClick={() => combineFilter(item.id,item.data)}
             filter={filter}
             id={item.id}
             key={item.id}

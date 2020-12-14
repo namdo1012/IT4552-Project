@@ -15,7 +15,7 @@ const VideoCard = ({ title, singer, url, tag }) => {
         />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{singer}</p>
+          {/*<p className="card-text">{singer}</p>*/}
           <div className="d-flex justify-content-between">
             <a href="#" className="btn btn-danger px-4">
               <AiFillPlayCircle className="mr-1" />
