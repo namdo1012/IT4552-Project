@@ -1,14 +1,15 @@
-import './style.css';
-import { NavBar_Sign } from '../../components/NavBar_Sign';
-import { MdKeyboardArrowRight } from "react-icons/md"
+import "./style.css";
+import { NavBar_Sign } from "../../components/NavBar_Sign";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const SignInPage = () => {
   return (
     <body>
       <div className="sign_in-container">
         <div classNameName="container">
-        <NavBar_Sign />
+          <NavBar_Sign />
           <form action="#" className="sign_in-form">
             <h2 className="title">Đăng Nhập</h2>
             <div className="input-field">
@@ -24,16 +25,25 @@ export const SignInPage = () => {
               <input type="password" placeholder="*********************" />
             </div>
             <button className="sign_in-btn solid">
-              đăng nhập
-              <MdKeyboardArrowRight className="arrow_icon"/>
+              <Link to="/course" style={{ color: "#fff" }}>
+                đăng nhập
+                <MdKeyboardArrowRight className="arrow_icon" />
+              </Link>
             </button>
-            <div href="#" className="ask_sign_up">
+
+            <div className="ask_sign_up">
               Bạn chưa có tài khoản ?
-              <input type="submit" value="Đăng ký ngay" className="go_sign_up" />
+              <Link to="/signup">
+                <input
+                  type="submit"
+                  value="Đăng ký ngay"
+                  className="go_sign_up"
+                />
+              </Link>
             </div>
           </form>
         </div>
       </div>
     </body>
-  )
-}
+  );
+};

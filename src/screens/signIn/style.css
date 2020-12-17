@@ -1,125 +1,124 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 body,
 input {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
 }
 
 .app__section {
-    padding: 0px 150px;
+  padding: 0px 150px;
 }
 
 .sign_in-container {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover; 
-    position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
 }
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .sign_in-form {
-    position: absolute;
-    width: 100%;
-    top: 16.11%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 16.11%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media (max-height: 782px) {
-    .sign_in-form {
-        top: 126px;
-    }
+  .sign_in-form {
+    top: 126px;
+  }
 }
 
 .title {
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: 1.2em;
-    margin-bottom: 1.3125em;
-    color: #000000;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 1.2em;
+  margin-bottom: 1.3125em;
+  color: #000000;
 }
 
 .input-field {
-    min-width: 281px;
-    width: 20%;
-    margin-bottom: 1.875em;
-    display: grid;
-    background-color: #fff;
+  min-width: 281px;
+  width: 20%;
+  margin-bottom: 1.875em;
+  display: grid;
+  background-color: #fff;
 }
 
 .input-field h4 {
-    font-weight: 500;
-    font-size: 0.75rem;
-    line-height: 150%;
-    letter-spacing: 0.2px;
-    color: #555770;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #555770;
 }
 
 .input-field input {
-    outline: none;
-    border: none;
-    line-height: 250%;
-    border-radius: 8px;
-    padding: 0 0.5rem;
-    background-color: #f0f0f0;
+  outline: none;
+  border: none;
+  line-height: 250%;
+  border-radius: 8px;
+  padding: 0 0.5rem;
+  background-color: #f0f0f0;
 }
 
 .input-field input::placeholder {
-    font-size: 1rem;
-    line-height: 150%;
-    color: #555770;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #555770;
 }
 
 .sign_in-btn {
-    min-width: 281px;
-    width: 20%;
-    border: none;
-    outline: none;
-    height: 3.33em;
-    background: linear-gradient(90deg, #F27A54 0%, #A154F2 100%);
-    border-radius: 5px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.5s;
-    font-size: 0.75rem;
-    margin: 5.33em;
+  min-width: 281px;
+  width: 20%;
+  border: none;
+  outline: none;
+  height: 3.33em;
+  background: linear-gradient(90deg, #f27a54 0%, #a154f2 100%);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.75rem;
 }
 
 .sign_in-btn:hover {
-    background-color: #4d84e2;
+  background-color: #4d84e2;
 }
 
 .arrow_icon {
-    position: relative;
-    font-family: Material Icons;
-    font-size: 1.5rem;
-    line-height: 83.33%;
-    left: 33.33%;
-    align-items: center;
-    text-align: center;
+  position: relative;
+  font-family: Material Icons;
+  font-size: 1.5rem;
+  line-height: 83.33%;
+  left: 33.33%;
+  align-items: center;
+  text-align: center;
 }
 
 .ask_sign_up {
-    font-size: 1rem;
-    min-width: 299px;
-    min-height: 22px;
-    line-height: 118.75%;
+  font-size: 1rem;
+  min-width: 299px;
+  min-height: 22px;
+  line-height: 118.75%;
 }
 
 .ask_sign_up span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .go_sign_up {
-    font-weight: bold;
-    outline: none;
-    border: none;
-    padding-left: 5px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding-left: 5px;
 }

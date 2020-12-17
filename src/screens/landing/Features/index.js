@@ -8,7 +8,7 @@ import "./style.css";
 
 export const Features = () => {
   return (
-    <div className="landing__features landing__section">
+    <div className="landing__features landing__section" id="features">
       <div className="features__title">Tính năng</div>
       <Row className="justify-content-md-center">
         {/* <div style={{ display: "flex", justifyContent: "center" }}> */}

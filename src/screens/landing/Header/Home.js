@@ -1,6 +1,7 @@
 import { NavBar } from "../../../components/NavBar";
 import { Button } from "react-bootstrap";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -15,9 +16,12 @@ export const Home = () => {
           thông tin, kiến thức và những kỹ năng để giúp các bạn chinh phục tiếng
           Nhật một cách hoàn hảo
         </div>
-        <Button variant="light" className="header__button app__button--full">
-          Đăng kí
-        </Button>
+
+        <Link to="/signup">
+          <Button variant="light" className="header__button app__button--full">
+            Đăng kí
+          </Button>
+        </Link>
       </div>
     </div>
   );
