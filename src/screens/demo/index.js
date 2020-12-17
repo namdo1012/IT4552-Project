@@ -1,26 +1,26 @@
 import React,{ useState, useEffect } from 'react'
-import { useDispatch,useSelector } from 'react-redux'
-import {handleLoginSuccess} from '../../services'
-import {loginSuccess} from '../../states/actions/user'
 import './style.css'
+import {addNewLesson, dbN5, getDataLesson} from "../../services/firebase/tutorial.service";
+import firebase from "../../services/firebase/firebase";
 
 export const Demo = () => {
-    const dispatch = useDispatch()
-    const {userInfor} = useSelector(state => state.user) // get state from store
 
-    console.log('fdasfaf',userInfor)
-    useEffect(() => {
-        handleLoginSuccess.getUser().then(
-            res => {
-                const data = res.data.results
-                dispatch(loginSuccess(data)) //dispatch action
-            }
-        )
-    },[])
+    const addHistory = (id) => {
+        let obj = {
+            L1:{data:[],process:0},
+            L2:{data:[],process:0},
+            L3:{data:[],process:0},
+            L4:{data:[],process:0},
+            L5:{data:[],process:0},
+        }
+        for (let i= 1; i<6; i++){
+            firebase.doc(`User/${id}/History/N${i}`).set(obj)
+        }
+    }
 
     return(
-        <div className="demo">
-            <p>Demo page</p>
+        <div >
+            <button onClick={() => addHistory('abcxyz')}>add history</button>
         </div>
     )
 }
