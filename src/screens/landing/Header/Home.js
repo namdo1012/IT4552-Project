@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const Home = () => {
   return (
     <div className="landing__home">
-      <NavBar />
+      <NavBar style={{ top: "30px" }} />
       <div className="header__content-box">
         <div className="header__hero-box">
           Website học tiếng Nhật online hàng đầu Việt Nam

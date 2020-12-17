@@ -58,7 +58,9 @@ export const References = () => {
   return (
     <div>
       {/* Navbar */}
-      <div className="mb-5">This is Navbar</div>
+      <NavBar
+        style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
+      />
 
       {/* References */}
       <div className="container-fluid references">
