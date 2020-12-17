@@ -1,5 +1,7 @@
 .turn-back-button {
   display: flex;
+  border: none;
+  background-color: transparent;
 }
 
 .turn-back--icon {

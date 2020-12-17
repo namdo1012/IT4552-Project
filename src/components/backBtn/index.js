@@ -1,14 +1,14 @@
 import { React } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
-export const BackBtn = ({ children }) => {
+export const BackBtn = ({ children, style, dest }) => {
   return (
-    <div
-      className="turn-back-button"
-      style={{ position: "absolute", top: "80px", left: "75px" }}
-    >
-      <div className="turn-back--icon"></div>
-      <span className="turn-back--text">{children}</span>
-    </div>
+    <Link to={`${dest}`}>
+      <button className="turn-back-button" style={{ ...style }}>
+        <div className="turn-back--icon"></div>
+        <span className="turn-back--text">{children}</span>
+      </button>
+    </Link>
   );
 };
