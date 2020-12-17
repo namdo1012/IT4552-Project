@@ -9,7 +9,7 @@ import { References } from "./screens/references";
 import { LandingPage } from "./screens/landing";
 import { Course } from "./screens/course";
 import { DetailCourse } from "./screens/detailCourse";
-import { Router, Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import { Temp } from "./screens/lessons/tmpLesson";
 
 function App() {

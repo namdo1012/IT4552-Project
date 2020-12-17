@@ -49,7 +49,12 @@ const renderList = (borderRadius = "50%") => {
 export const Vocabulary = () => {
   return (
     <Fragment>
-      <BackBtn>Homepage</BackBtn>
+      <BackBtn
+        style={{ position: "absolute", top: "80px", left: "75px" }}
+        dest="/course"
+      >
+        Back to course
+      </BackBtn>
       {/* Turn-back button component */}
       {/* <div
         className="turn-back-button"

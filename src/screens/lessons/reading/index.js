@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
+import { BackBtn } from "../../../components/backBtn";
 import { Link } from "react-router-dom";
 import { ImHome } from "react-icons/im";
 import Question from "../../../components/Question";
@@ -39,11 +40,12 @@ export const Reading = ({ doneLesson, dataLesson }) => {
   return (
     <>
       <div className="header">
-        <Link to="/course" className="btn btn-warning">
-          <ImHome className="mr-2" />
-          Home
-        </Link>
+        <BackBtn style={{ marginTop: "50px" }} dest="/course">
+          {" "}
+          Back to course{" "}
+        </BackBtn>
       </div>
+
       <div className="content">
         <h4 className="inline-block text-center mb-3">
           {dataLesson?.title} Hãy đọc đoạn văn dưới đây và trả lời các câu hỏi
