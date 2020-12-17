@@ -2,23 +2,6 @@ body {
   background-color: #e5e5e5;
 }
 
-.turn-back-button {
-  display: flex;
-}
-
-.turn-back--icon {
-  width: 30px;
-  height: 30px;
-  background-color: #f27a54;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.turn-back--text {
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
 .vocabulary-item-content {
   width: 40px;
   height: 40px;

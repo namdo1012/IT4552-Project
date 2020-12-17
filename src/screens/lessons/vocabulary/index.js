@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
 import React, { Fragment } from "react";
 import "./style.css";
+import { BackBtn } from "../../../components/backBtn";
 
 const renderList = (borderRadius = "50%") => {
-  // const { borderRadius } = props;
   return (
     <div className="vocabulary-list">
       <div
@@ -49,14 +49,15 @@ const renderList = (borderRadius = "50%") => {
 export const Vocabulary = () => {
   return (
     <Fragment>
+      <BackBtn>Homepage</BackBtn>
       {/* Turn-back button component */}
-      <div
+      {/* <div
         className="turn-back-button"
         style={{ position: "absolute", top: "80px", left: "75px" }}
       >
         <div className="turn-back--icon"></div>
         <span className="turn-back--text">Homepage</span>
-      </div>
+      </div> */}
 
       <div className="vocabulary-section__content">
         {/* Vocabury list */}
