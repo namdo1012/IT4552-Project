@@ -1,5 +1,5 @@
 import "./style.css";
-import { NavBar_Sign } from "../../components/NavBar_Sign";
+import { NavBarSign } from "../../components/NavBarSign";
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -8,7 +8,7 @@ export const SignUpPage = () => {
     <body>
       <div className="sign_in-container">
         <div classNameName="container">
-          <NavBar_Sign />
+          <NavBarSign />
           <form action="#" className="sign_in-form">
             <h2 className="title">Đăng ký</h2>
             <div className="input-field">

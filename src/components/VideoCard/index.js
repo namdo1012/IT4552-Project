@@ -7,6 +7,7 @@ const VideoCard = ({ title, singer, url, tag }) => {
     <div className="col mb-4">
       <div className="card">
         <iframe
+          title={`${url}`}
           className="embed-responsive-item"
           src={url}
           frameBorder={0}
@@ -17,7 +18,7 @@ const VideoCard = ({ title, singer, url, tag }) => {
           <h5 className="card-title">{title}</h5>
           {/*<p className="card-text">{singer}</p>*/}
           <div className="d-flex justify-content-between">
-            <a href="#" className="btn btn-danger px-4">
+            <a href="/" className="btn btn-danger px-4">
               <AiFillPlayCircle className="mr-1" />
               Play
             </a>

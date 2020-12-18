@@ -1,5 +1,5 @@
 import "./style.css";
-import { NavBar_Sign } from "../../components/NavBar_Sign";
+import { NavBarSign } from "../../components/NavBarSign";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ export const SignInPage = () => {
     <body>
       <div className="sign_in-container">
         <div classNameName="container">
-          <NavBar_Sign />
+          <NavBarSign />
           <form action="#" className="sign_in-form">
             <h2 className="title">Đăng Nhập</h2>
             <div className="input-field">

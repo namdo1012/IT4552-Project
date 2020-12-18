@@ -12,11 +12,11 @@ const DocumentCard = ({ cover, title, linkDownload }) => {
           <div className="col-sm-8">
             <div className="card-body">
               <h5 className="card-title">{title}</h5>
-              <a href={linkDownload} target="_blank">
-              <button type="button" className="btn btn-success mt-4">
-                <FaDownload className="mr-1"/>
-                Tải về
-              </button>
+              <a href={linkDownload} target="_blank" rel="noreferrer">
+                <button type="button" className="btn btn-success mt-4">
+                  <FaDownload className="mr-1" />
+                  Tải về
+                </button>
               </a>
             </div>
           </div>

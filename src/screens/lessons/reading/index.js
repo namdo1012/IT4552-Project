@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 
 import { BackBtn } from "../../../components/backBtn";
-import { Link } from "react-router-dom";
-import { ImHome } from "react-icons/im";
 import Question from "../../../components/Question";
 
 export const Reading = ({ doneLesson, dataLesson }) => {
   console.log("data lesson", dataLesson);
-  const [count, setCount] = useState("");
+  // const [count, setCount] = useState("");
 
   const R1 = {
     content:

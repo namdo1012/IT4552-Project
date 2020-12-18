@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React, { Fragment } from "react";
 import "./style.css";
 import { BackBtn } from "../../../components/backBtn";

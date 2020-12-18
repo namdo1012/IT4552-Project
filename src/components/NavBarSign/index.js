@@ -1,9 +1,9 @@
-import { Navbar } from 'react-bootstrap';
+import { Navbar } from "react-bootstrap";
 import { ImCloud } from "react-icons/im";
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
 
-export const NavBar_Sign = () => {
+export const NavBarSign = () => {
   return (
     <Navbar className="app_navbar" collapseOnSelect expand="lg" variant="light">
       <Navbar.Brand href="#home" className="app_logo">
@@ -11,5 +11,5 @@ export const NavBar_Sign = () => {
         BT Nihongo
       </Navbar.Brand>
     </Navbar>
-  )
-}
+  );
+};
