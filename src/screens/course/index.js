@@ -28,6 +28,7 @@ export const Course = () => {
     { id: "L4", name: "Buổi học số 4" },
     { id: "L5", name: "Buổi học số 5" },
   ];
+  console.log(less);
   const getProcess = (btnCourse) => {
     setCourse(btnCourse); // lay name N5,N4...
     const db = firebase.doc(`/User/abcxyz/History/${course}`);
