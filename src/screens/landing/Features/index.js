@@ -16,7 +16,10 @@ export const Features = () => {
           <div className="features__card">
             <div className="card-image feature__img--1"></div>
             <div className="card-content">
-              <div className="card-title"> Hệ thống kiến thức toàn diện</div>
+              <div className="feature__card-title">
+                {" "}
+                Hệ thống kiến thức toàn diện
+              </div>
               <div className="card-description">
                 Với danh sách các bài học phong phú, Dekiru cung cấp cho bạn một
                 hệ thống kiến thức tiếng Nhật đầy đủ và toàn diện nhất: từ vựng,
@@ -29,7 +32,9 @@ export const Features = () => {
           <div className="features__card">
             <div className="card-image feature__img--2"></div>
             <div className="card-content">
-              <div className="card-title">Học tiếng Nhật mọi lúc mọi nơi</div>
+              <div className="feature__card-title">
+                Học tiếng Nhật mọi lúc mọi nơi
+              </div>
               <div className="card-description">
                 Bằng việc có tài khoản học tập tại Dekiru, bạn đã có thể chủ
                 động thời gian học tập của bản thân mình. Đặc biệt phù hợp với
@@ -42,7 +47,9 @@ export const Features = () => {
           <div className="features__card">
             <div className="card-image feature__img--3"></div>
             <div className="card-content">
-              <div className="card-title">Phương pháp học tập thú vị</div>
+              <div className="feature__card-title">
+                Phương pháp học tập thú vị
+              </div>
               <div className="card-description">
                 Chương trình học Dekiru cung cấp đầy đủ các kiến thức về tiếng
                 Nhật thông qua các hoạt động tương tác, trò chơi. Dekiru sẽ giúp
