@@ -6,7 +6,7 @@ const Item = ({ title, filter, onClick, id }) => {
     <button
       id={id}
       type="button"
-      className="list-group-item list-group-item-action"
+      className="filter__item"
       style={{ backgroundColor: title === filter ? "#5BFF7F" : "" }}
       onClick={onClick}
     >
@@ -15,18 +15,24 @@ const Item = ({ title, filter, onClick, id }) => {
   );
 };
 
-const Filter = ({listFilter,setStateFilter}) => {
+const Filter = ({ listFilter, setStateFilter }) => {
   const [filter, setFilter] = useState("Tất cả");
 
-  const combineFilter = (id,data) => {
-    setStateFilter(id)
-    setFilter(data)
-  }
+  const combineFilter = (id, data) => {
+    setStateFilter(id);
+    setFilter(data);
+  };
 
   return (
     <div className="col-sm-3 rounded p-4">
       <div className="dropdown mb-2">
         <button
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
           className="btn btn-secondary dropdown-toggle w-100"
           type="button"
           id="dropdownMenuButton"
@@ -34,14 +40,14 @@ const Filter = ({listFilter,setStateFilter}) => {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          Lựa chọn
+          Thể loại
         </button>
       </div>
       <div className="list-group list-group-flush">
         {listFilter.map((item) => (
           <Item
             title={item.data}
-            onClick={() => combineFilter(item.id,item.data)}
+            onClick={() => combineFilter(item.id, item.data)}
             filter={filter}
             id={item.id}
             key={item.id}
