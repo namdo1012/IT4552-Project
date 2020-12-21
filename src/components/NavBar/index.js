@@ -22,7 +22,9 @@ export const NavBar = ({ style }) => {
           className="app__icon"
           style={{ color: style.color }}
         />
-        BT Nihongo
+        <Link to="/" style={{ color: style.color }}>
+          BT Nihongo
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
