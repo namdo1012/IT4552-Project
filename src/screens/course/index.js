@@ -108,26 +108,6 @@ export const Course = () => {
 
         {/*cnt process*/}
         <div className="ctn-process-course">
-        {/*  <ProcessCard*/}
-        {/*    title={"Bài học"}*/}
-        {/*    description={"Đã hoàn thành"}*/}
-        {/*    total={240}*/}
-        {/*  />*/}
-        {/*  <ProcessCard*/}
-        {/*    title={"Bài học"}*/}
-        {/*    description={"Đã hoàn thành"}*/}
-        {/*    total={240}*/}
-        {/*  />*/}
-        {/*  <ProcessCard*/}
-        {/*    title={"Bài học"}*/}
-        {/*    description={"Đã hoàn thành"}*/}
-        {/*    total={240}*/}
-        {/*  />*/}
-        {/*  <ProcessCard*/}
-        {/*    title={"Bài học"}*/}
-        {/*    description={"Đã hoàn thành"}*/}
-        {/*    total={240}*/}
-        {/*  />*/}
            <TotalCard total={total} course={course}/>
         </div>
       </div>
