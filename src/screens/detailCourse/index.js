@@ -1,8 +1,6 @@
 import React from "react";
 import { ProcessCard } from "../../components/ProcessCard";
 import { NavBar } from "../../components/NavBar";
-
-// import { TotalCard } from "../../components/TotalCard";
 import "./style.css";
 import { CircleLesson } from "../../components/CircleLesson";
 import { useSelector } from "react-redux";
