@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
-import { Button, ProgressBar, ListGroup } from "react-bootstrap";
+import { ProgressBar, ListGroup } from "react-bootstrap";
 import firebase from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
 import { TotalCard } from "../../components/TotalCard";
