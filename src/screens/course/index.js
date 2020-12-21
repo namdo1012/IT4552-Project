@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
 import { Button, ProgressBar, ListGroup } from "react-bootstrap";
-import { ProcessCard } from "../../components/ProcessCard";
-// import { TotalCard } from "../../components/TotalCard";
 import firebase from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
+import {TotalCard} from "../../components/TotalCard";
 
 export const Course = () => {
   const [course, setCourse] = useState("N1");
   const [less, setLess] = useState(null);
   const { history } = useSelector((state) => state.history);
+  const total = Object.values(history).reduce((t, {process}) => t + process*0.2, 0)
+
   const dispatch = useDispatch();
   const level = [
     { id: 1, name: "N5" },
@@ -90,14 +91,11 @@ export const Course = () => {
                   <ListGroup.Item className="ctn-list-group">
                     {item.name}
                     <ProgressBar
-                      now={60}
-                      // now={history[item.id]?.process}
-                      // label={`${history[item.id]?.process}%`}
+                      now={history[item.id]?.process}
                       className="item-progressBar"
                     />
                     <span className="percent-process">
-                      {/* {history[item.id]?.process}% */}
-                      26%
+                      {`${history[item.id]?.process || 0}%`}
                     </span>
                   </ListGroup.Item>
                 </Link>
@@ -108,27 +106,7 @@ export const Course = () => {
 
         {/*cnt process*/}
         <div className="ctn-process-course">
-          <ProcessCard
-            title={"Bài học"}
-            description={"Đã hoàn thành"}
-            total={240}
-          />
-          <ProcessCard
-            title={"Bài học"}
-            description={"Đã hoàn thành"}
-            total={240}
-          />
-          <ProcessCard
-            title={"Bài học"}
-            description={"Đã hoàn thành"}
-            total={240}
-          />
-          <ProcessCard
-            title={"Bài học"}
-            description={"Đã hoàn thành"}
-            total={240}
-          />
-          {/* <TotalCard /> */}
+           <TotalCard total={total} course={course}/>
         </div>
       </div>
 
