@@ -3,11 +3,12 @@ import { NavBar } from "../../components/NavBar";
 import "./style.css";
 import { Button, ProgressBar, ListGroup } from "react-bootstrap";
 import { ProcessCard } from "../../components/ProcessCard";
-import { TotalCard } from "../../components/TotalCard";
+// import { TotalCard } from "../../components/TotalCard";
 import firebase from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { storeHistory } from "../../states/actions/historyCourse";
+import { AiFillCaretDown } from "react-icons/ai";
 
 export const Course = () => {
   const [course, setCourse] = useState("N1");
@@ -29,6 +30,7 @@ export const Course = () => {
     { id: "L5", name: "Buổi học số 5" },
   ];
   console.log(less);
+  console.log(history);
   const getProcess = (btnCourse) => {
     setCourse(btnCourse); // lay name N5,N4...
     const db = firebase.doc(`/User/abcxyz/History/${course}`);
@@ -60,6 +62,7 @@ export const Course = () => {
             key={item.id}
           >
             {item.name}
+            <AiFillCaretDown />
           </Button>
         ))}
       </div>
@@ -87,12 +90,14 @@ export const Course = () => {
                   <ListGroup.Item className="ctn-list-group">
                     {item.name}
                     <ProgressBar
-                      now={history[item.id]?.process}
-                      label={`${history[item.id]?.process}%`}
+                      now={60}
+                      // now={history[item.id]?.process}
+                      // label={`${history[item.id]?.process}%`}
                       className="item-progressBar"
                     />
                     <span className="percent-process">
-                      {history[item.id]?.process}%
+                      {/* {history[item.id]?.process}% */}
+                      26%
                     </span>
                   </ListGroup.Item>
                 </Link>
@@ -123,7 +128,7 @@ export const Course = () => {
             description={"Đã hoàn thành"}
             total={240}
           />
-          <TotalCard />
+          {/* <TotalCard /> */}
         </div>
       </div>
 
