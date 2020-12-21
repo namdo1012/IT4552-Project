@@ -8,6 +8,7 @@ import firebase from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { storeHistory } from "../../states/actions/historyCourse";
+import { AiFillCaretDown } from "react-icons/ai";
 
 export const Course = () => {
   const [course, setCourse] = useState("N1");
@@ -60,6 +61,7 @@ export const Course = () => {
             key={item.id}
           >
             {item.name}
+            <AiFillCaretDown />
           </Button>
         ))}
       </div>
@@ -87,12 +89,14 @@ export const Course = () => {
                   <ListGroup.Item className="ctn-list-group">
                     {item.name}
                     <ProgressBar
-                      now={history[item.id]?.process}
-                      label={`${history[item.id]?.process}%`}
+                      now={60}
+                      // now={history[item.id]?.process}
+                      // label={`${history[item.id]?.process}%`}
                       className="item-progressBar"
                     />
                     <span className="percent-process">
-                      {history[item.id]?.process}%
+                      {/* {history[item.id]?.process}% */}
+                      26%
                     </span>
                   </ListGroup.Item>
                 </Link>
@@ -123,7 +127,7 @@ export const Course = () => {
             description={"Đã hoàn thành"}
             total={240}
           />
-          <TotalCard />
+          {/* <TotalCard /> */}
         </div>
       </div>
 
