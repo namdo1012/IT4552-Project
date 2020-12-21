@@ -3,6 +3,7 @@ body {
 }
 
 .ctn-course {
+  padding-right: 30px;
   margin: 20px auto;
   display: flex;
   flex-direction: row;
@@ -11,11 +12,27 @@ body {
   justify-content: space-between;
 }
 
-.ctn-list-course {
+.page__gap {
+  width: 100%;
+  height: 95px;
+}
+
+/* .ctn-list-course {
   width: 65%;
   background-color: #525464;
   border-radius: 10px;
   height: auto;
+} */
+
+.ctn-list-course {
+  padding: 65px 0;
+  width: 65%;
+  background-color: #525464;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.6);
 }
 
 .ctn-process-course {
@@ -26,6 +43,28 @@ body {
 .list-lesson {
   height: 500px;
   overflow-y: scroll;
+}
+
+/* LIST lESSON SCROLLBAR DESIGN */
+/* width */
+.list-lesson::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.list-lesson::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.list-lesson::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.list-lesson::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .ctn-sub-list-course {
@@ -47,16 +86,18 @@ body {
 .txt-title {
   font-size: 40px;
   color: white;
-  /* margin-bottom: 50px; */
+  margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 .item-small-dot {
-  height: 20px;
-  width: 20px;
-  background-color: #bbb;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 20px;
+  margin-bottom: 8px;
+  background: linear-gradient(#f27a54, #a154f2);
 }
 
 .txt-lesson {
