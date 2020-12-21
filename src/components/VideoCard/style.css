@@ -1,8 +1,38 @@
 .card {
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .badge {
   transform: translateY(8px);
+}
+
+.video__card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.video__button--play {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+
+.video__tag {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  padding: 5px 10px;
+}
+
+.video__card-singer {
+  font-size: 14px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { AiFillPlayCircle } from "react-icons/ai";
+import { GiMicrophone } from "react-icons/gi";
 
 const VideoCard = ({ title, singer, url, tag }) => {
   return (
@@ -15,16 +16,31 @@ const VideoCard = ({ title, singer, url, tag }) => {
           allowFullScreen
         />
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          {/*<p className="card-text">{singer}</p>*/}
-          <div className="d-flex justify-content-between">
-            <a href="/" className="btn btn-danger px-4">
+          <h5 className="video__card-title">{title}</h5>
+          <div className="video__card-singer">
+            <GiMicrophone />
+            <i style={{ marginLeft: "5px", marginRight: "5px" }}>Singer:</i>
+            Lê Nhật Huy{" "}
+          </div>
+
+          <div
+            className="d-flex justify-content-between"
+            style={{ marginTop: "25px" }}
+          >
+            <a
+              href="/"
+              className="btn video__button--play"
+              style={{
+                backgroundColor: "#FF5B5B",
+                boxShadow: "0 8px 10px rgba(0, 0, 0, 0.1)",
+              }}
+            >
               <AiFillPlayCircle className="mr-1" />
               Play
             </a>
-            <p className="badge badge-danger px-2">{tag}</p>
           </div>
         </div>
+        <p className="badge badge-success video__tag">{tag}</p>
       </div>
     </div>
   );
