@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
-import { Button, ProgressBar, ListGroup } from "react-bootstrap";
+import { ProgressBar, ListGroup } from "react-bootstrap";
 import firebase from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
+import { TotalCard } from "../../components/TotalCard";
+
 import { useDispatch, useSelector } from "react-redux";
 import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
-import {TotalCard} from "../../components/TotalCard";
 
 export const Course = () => {
   const [course, setCourse] = useState("N1");
   const [less, setLess] = useState(null);
+  const [currentSelectBtn, setCurrentSelectBtn] = useState(0);
   const { history } = useSelector((state) => state.history);
-  const total = Object.values(history).reduce((t, {process}) => t + process*0.2, 0)
+  const total = Object.values(history).reduce(
+    (t, { process }) => t + process * 0.2,
+    0
+  );
 
   const dispatch = useDispatch();
   const level = [
@@ -34,11 +39,11 @@ export const Course = () => {
   console.log(history);
   const getProcess = (btnCourse) => {
     setCourse(btnCourse); // lay name N5,N4...
-    const db = firebase.doc(`/User/abcxyz/History/${course}`);
+    const db = firebase.doc(`/User/abcxyz/History/${btnCourse}`);
     db.get().then((doc) => {
       if (doc.exists) {
         let data = doc.data();
-        console.log("have", course, data);
+        console.log("have", btnCourse, data);
         setLess(data);
         dispatch(storeHistory(data));
       } else {
@@ -56,15 +61,26 @@ export const Course = () => {
 
       {/*Level*/}
       <div className="ctn-level">
-        {level.map((item) => (
-          <Button
+        {level.map((item, idx) => (
+          <button
             className="ctn-col"
-            onClick={() => getProcess(item.name)}
+            onClick={() => {
+              getProcess(item.name);
+              setCurrentSelectBtn(idx);
+            }}
             key={item.id}
+            style={
+              idx === currentSelectBtn
+                ? {
+                    background:
+                      "linear-gradient( to right bottom, rgba(242, 122, 84, 0.7), rgba(161, 84, 242, 0.7) )",
+                  }
+                : null
+            }
           >
             {item.name}
             <AiFillCaretDown />
-          </Button>
+          </button>
         ))}
       </div>
 
@@ -89,14 +105,17 @@ export const Course = () => {
                   key={item.id}
                 >
                   <ListGroup.Item className="ctn-list-group">
-                    {item.name}
+                    <div style={{ width: "20%" }}>{item.name}</div>
                     <ProgressBar
                       now={history[item.id]?.process}
                       className="item-progressBar"
                     />
-                    <span className="percent-process">
+                    <div
+                      className="percent-process"
+                      style={{ width: "10%", textAlign: "right" }}
+                    >
                       {`${history[item.id]?.process || 0}%`}
-                    </span>
+                    </div>
                   </ListGroup.Item>
                 </Link>
               ))}
@@ -106,7 +125,8 @@ export const Course = () => {
 
         {/*cnt process*/}
         <div className="ctn-process-course">
-           <TotalCard total={total} course={course}/>
+          <TotalCard total={total} course={course} />
+          {/* <CircularProgressbar value={total} text={`${total}%`} />; */}
         </div>
       </div>
 

@@ -23,6 +23,10 @@ body {
   border: none;
 }
 
+.ctn-col:focus {
+  outline: none;
+}
+
 .ctn-course {
   padding-right: 30px;
   margin: 20px auto;
