@@ -4,6 +4,7 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { GiMicrophone } from "react-icons/gi";
 
 const VideoCard = ({ title, singer, url, tag }) => {
+  console.log(url);
   return (
     <div className="col mb-4">
       <div className="card">
@@ -28,7 +29,9 @@ const VideoCard = ({ title, singer, url, tag }) => {
             style={{ marginTop: "25px" }}
           >
             <a
-              href="/"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn video__button--play"
               style={{
                 backgroundColor: "#FF5B5B",

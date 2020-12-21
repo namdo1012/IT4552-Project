@@ -45,7 +45,8 @@ export const NavBar = ({ style }) => {
           </Nav.Link>
           <Nav.Link
             style={{ color: style.color }}
-            href="#pricing"
+            target="_blank"
+            href="http://morningjapan.com/"
             className="app__navbar-link"
           >
             Blog
@@ -59,7 +60,8 @@ export const NavBar = ({ style }) => {
           </Nav.Link>
           <Nav.Link
             style={{ color: style.color }}
-            href="#pricing"
+            target="_blank"
+            href="https://tryjlpt.com/en/"
             className="app__navbar-link"
           >
             Luyện thi
