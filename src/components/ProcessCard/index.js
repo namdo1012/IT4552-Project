@@ -1,8 +1,10 @@
 import React from "react";
 import { BsCheckAll } from "react-icons/bs";
 import "./style.css";
+import {useSelector} from "react-redux";
 
-export const ProcessCard = ({ title, description, total }) => {
+export const ProcessCard = ({ title, description, total, idLesson }) => {
+    const dataHistory = useSelector((state) => state.history.history)[idLesson].process || 0
   return (
     <div className="card_container">
       <div className="card_info">
@@ -13,7 +15,7 @@ export const ProcessCard = ({ title, description, total }) => {
           {description}
         </div>
       </div>
-      <div className="card_stats">{total}</div>
+      <div className="card_stats">{`${dataHistory}%`}</div>
     </div>
   );
 };

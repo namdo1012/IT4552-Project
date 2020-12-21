@@ -12,7 +12,6 @@ export const DetailCourse = (props) => {
   const { stateCourse, stateLesson, nameLesson } = props.location.state;
   const dataHistory = useSelector((state) => state.history.history)[stateLesson]
     ?.data;
-
   let numberLesson = stateLesson.slice(-1);
   let listLesson = [
     {
@@ -36,6 +35,13 @@ export const DetailCourse = (props) => {
       data: [{ id: "T1" }],
     },
   ];
+  const listCourse = [
+    { id: "L1", name: "Buổi học số 1" },
+    { id: "L2", name: "Buổi học số 2" },
+    { id: "L3", name: "Buổi học số 3" },
+    { id: "L4", name: "Buổi học số 4" },
+    { id: "L5", name: "Buổi học số 5" },
+  ].filter(item => item.id !== stateLesson);
 
   return (
     <>
@@ -44,7 +50,7 @@ export const DetailCourse = (props) => {
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
       />
 
-      <div className="page__gap"></div>
+      <div className="page__gap"/>
       <div className="ctn-course">
         <div className="ctn-list-course">
           <div className="ctn-sub-list-course">
@@ -91,46 +97,28 @@ export const DetailCourse = (props) => {
         <div className="ctn-process-course">
           {/* <TotalCard /> */}
           <div className="list-lesson">
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
-            <ProcessCard
-              title={"Buổi học số 1"}
-              description={"Đã hoàn thành"}
-              total={240}
-            />
+            {
+            listCourse.map(item =>
+                ( <Link
+                    to={{
+                      pathname: `/course/${stateCourse}/${item.id}`,
+                      state: {
+                        stateCourse: stateCourse,
+                        stateLesson: item.id,
+                        nameLesson: item.name,
+                      },
+                    }}
+                    key={item.id}
+                >
+                  <ProcessCard
+                      title={item.name}
+                      description={"Đã hoàn thành"}
+                      total={240}
+                      idLesson={item.id}
+                      />
+                </Link>)
+            )
+          }
           </div>
         </div>
       </div>
