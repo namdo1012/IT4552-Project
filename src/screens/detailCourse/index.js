@@ -39,16 +39,17 @@ export const DetailCourse = (props) => {
     { id: "L3", name: "Buổi học số 3" },
     { id: "L4", name: "Buổi học số 4" },
     { id: "L5", name: "Buổi học số 5" },
-  ].filter(item => item.id !== stateLesson);
+  ].filter((item) => item.id !== stateLesson);
 
   return (
     <>
       {/*<NavBar/>*/}
       <NavBar
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
+        type="mainpage"
       />
 
-      <div className="page__gap"/>
+      <div className="page__gap" />
       <div className="ctn-course">
         <div className="ctn-list-course">
           <div className="ctn-sub-list-course">
@@ -95,28 +96,26 @@ export const DetailCourse = (props) => {
         <div className="ctn-process-course">
           {/* <TotalCard /> */}
           <div className="list-lesson">
-            {
-            listCourse.map(item =>
-                ( <Link
-                    to={{
-                      pathname: `/course/${stateCourse}/${item.id}`,
-                      state: {
-                        stateCourse: stateCourse,
-                        stateLesson: item.id,
-                        nameLesson: item.name,
-                      },
-                    }}
-                    key={item.id}
-                >
-                  <ProcessCard
-                      title={item.name}
-                      description={"Đã hoàn thành"}
-                      total={240}
-                      idLesson={item.id}
-                      />
-                </Link>)
-            )
-          }
+            {listCourse.map((item) => (
+              <Link
+                to={{
+                  pathname: `/course/${stateCourse}/${item.id}`,
+                  state: {
+                    stateCourse: stateCourse,
+                    stateLesson: item.id,
+                    nameLesson: item.name,
+                  },
+                }}
+                key={item.id}
+              >
+                <ProcessCard
+                  title={item.name}
+                  description={"Đã hoàn thành"}
+                  total={240}
+                  idLesson={item.id}
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -1,10 +1,5 @@
-// import { NavBar } from "../../../components/NavBar";
-// import { Button } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import "./style.css";
-// import featureImg1 from "../img/feature-1.png";
-// import featureImg2 from "../img/feature-2.png";
-// import featureImg3 from "../img/feature-3.png";
 
 export const Features = () => {
   return (
