@@ -1,4 +1,3 @@
-// import { NavBar } from "../../../components/NavBar";
 import { Button } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import descriptionImg1 from "../img/feature-1.png";

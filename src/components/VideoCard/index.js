@@ -4,7 +4,12 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { GiMicrophone } from "react-icons/gi";
 
 const VideoCard = ({ title, singer, url, tag }) => {
-  console.log(url);
+  const tagType =
+    tag === "Nâng cao"
+      ? "badge-danger"
+      : tag === "Trung bình"
+      ? "badge-warning"
+      : "badge-success";
   return (
     <div className="col mb-4">
       <div className="card">
@@ -43,7 +48,7 @@ const VideoCard = ({ title, singer, url, tag }) => {
             </a>
           </div>
         </div>
-        <p className="badge badge-success video__tag">{tag}</p>
+        <p className={`badge ${tagType} video__tag`}>{tag}</p>
       </div>
     </div>
   );

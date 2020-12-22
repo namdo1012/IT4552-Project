@@ -60,6 +60,7 @@ export const Video = () => {
       {/* Navbar */}
       <NavBar
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
+        type="mainpage"
       />
 
       {/* References */}
