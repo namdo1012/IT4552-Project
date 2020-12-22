@@ -57,6 +57,7 @@ export const Course = () => {
       {/*<NavBar/>*/}
       <NavBar
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
+        type="mainpage"
       />
 
       {/*Level*/}
