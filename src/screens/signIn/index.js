@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { NavBar } from "../../components/NavBar";
 
 import { useDispatch, useSelector } from "react-redux";
 import { signIn } from "../../states/actions/auth";
@@ -14,6 +15,10 @@ export const SignInPage = () => {
 
   return (
     <>
+      <NavBar
+        style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
+        type="mainpage"
+      />
       <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => {
@@ -39,10 +44,15 @@ export const SignInPage = () => {
           return (
             <form
               className="card bg-transparent text-dark mx-auto"
-              style={{ maxWidth: "18rem", top: "120px" }}
+              style={{ maxWidth: "21rem", top: "120px" }}
               onSubmit={handleSubmit}
             >
-              <div className="card-header text-center">Sign In</div>
+              <div
+                className="card-header text-center"
+                style={{ fontSize: "30px" }}
+              >
+                Đăng nhập
+              </div>
               <div className="card-body text-left">
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
@@ -57,6 +67,7 @@ export const SignInPage = () => {
                     placeholder="Enter email"
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    style={{ borderRadius: "10px" }}
                   />
                   {errors.email && touched.email ? (
                     <small className="text-danger">{errors.email}</small>
@@ -77,6 +88,7 @@ export const SignInPage = () => {
                     placeholder="Enter password"
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    style={{ borderRadius: "10px" }}
                   />
                   {errors.password && touched.password ? (
                     <small className="text-danger">{errors.password}</small>
@@ -90,14 +102,19 @@ export const SignInPage = () => {
                 <input
                   className="btn btn-dark btn-block mt-3"
                   type="submit"
-                  value="Sign in"
+                  value="Đăng nhập"
                   disabled={errors.password || errors.email}
+                  style={{
+                    background:
+                      "linear-gradient(to bottom right, #f27a54, #a154f2)",
+                    border: "none",
+                  }}
                 />
                 <p className="mt-2">
-                  Don't have an account?
+                  Bạn chưa có tài khoản?
                   <Link to="/signup" className="text-decoration-none">
                     {" "}
-                    Sign up
+                    Đăng ký ngay
                   </Link>
                 </p>
               </div>
