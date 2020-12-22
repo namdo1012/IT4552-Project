@@ -1,54 +1,144 @@
-import "./style.css";
-import { NavBarSign } from "../../components/NavBarSign";
-import { Link } from "react-router-dom";
 import React from "react";
+import { Link, Redirect } from "react-router-dom";
+import { Formik } from "formik";
+import * as Yup from "yup";
+
+import { useDispatch, useSelector } from "react-redux";
+import { signUp } from "../../states/actions/auth";
 
 export const SignUpPage = () => {
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  if (auth.authenticated) return <Redirect to="/course" />;
+
   return (
-    <body>
-      <div className="sign_in-container">
-        <div classNameName="container">
-          <NavBarSign />
-          <form action="#" className="sign_in-form">
-            <h2 className="title">Đăng ký</h2>
-            <div className="input-field">
-              <h4>Họ và tên</h4>
-              <input type="text" placeholder="Bách Tùng" />
-            </div>
-            <div className="input-field">
-              <h4>Email</h4>
-              <input type="text" placeholder="bachtung@gmail.com" />
-            </div>
-            <div className="input-field">
-              <h4>Số điện thoại</h4>
-              <input type="text" placeholder="414235235255525" />
-            </div>
-            <div className="input-field">
-              <h4>Password</h4>
-              <input type="password" placeholder="*********************" />
-            </div>
-            <div className="input-field">
-              <h4>Confirm Password</h4>
-              <input type="password" placeholder="*********************" />
-            </div>
-            <button className="sign_in-btn solid">
-              <Link to="/course" style={{ color: "#fff" }}>
-                đăng ký
-              </Link>
-            </button>
-            <div className="ask_sign_in">
-              Bạn đã có tài khoản ?
-              <Link to="/login">
+    <>
+      <Formik
+        initialValues={{ email: "", password: "", confirmPassword: "" }}
+        onSubmit={(values) => {
+          dispatch(signUp({ email: values.email, password: values.password }));
+        }}
+        validationSchema={Yup.object().shape({
+          email: Yup.string()
+            .email("Invalid email address")
+            .required("Required"),
+          password: Yup.string()
+            .required("Required")
+            .min(6, "Password must be at least 6 characters"),
+          confirmPassword: Yup.string()
+            .required("Required")
+            .min(6, "Password must be at least 6 characters")
+            .test(
+              "Passwords match",
+              "Confirm Password & Password must be same",
+              function (value) {
+                return this.parent.password === value;
+              }
+            ),
+        })}
+      >
+        {(props) => {
+          const {
+            touched,
+            errors,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+          } = props;
+          return (
+            <form
+              className="card bg-transparent text-dark mx-auto"
+              style={{ maxWidth: "18rem", top: "120px" }}
+              onSubmit={handleSubmit}
+            >
+              <div className="card-header text-center">Sign Up</div>
+              <div className="card-body text-left">
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    className={
+                      errors.email && touched.email
+                        ? "form-control border border-danger"
+                        : "form-control"
+                    }
+                    placeholder="Enter email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.email && touched.email ? (
+                    <small className="text-danger">{errors.email}</small>
+                  ) : null}
+                </div>
+                <div className="form-group">
+                  <label className="mt-2" htmlFor="password">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    className={
+                      errors.password && touched.password
+                        ? "form-control border border-danger"
+                        : "form-control"
+                    }
+                    placeholder="Enter password"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.password && touched.password ? (
+                    <small className="text-danger">{errors.password}</small>
+                  ) : null}
+                </div>
+                <div className="form-group">
+                  <label className="mt-2" htmlFor="password">
+                    Confirm Password
+                  </label>
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    className={
+                      errors.confirmPassword && touched.confirmPassword
+                        ? "form-control border border-danger"
+                        : "form-control"
+                    }
+                    placeholder="Confirm password"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  {errors.confirmPassword && touched.confirmPassword ? (
+                    <small className="text-danger">
+                      {errors.confirmPassword}
+                    </small>
+                  ) : null}
+                </div>
+                {auth.error ? (
+                  <small className="text-danger">
+                    Email has already exists
+                  </small>
+                ) : null}
                 <input
+                  className="btn btn-dark btn-block mt-3"
                   type="submit"
-                  value="Đăng nhập ngay"
-                  className="go_sign_in"
+                  value="Sign up"
+                  disabled={
+                    errors.password || errors.email || errors.confirmPassword
+                  }
                 />
-              </Link>
-            </div>
-          </form>
-        </div>
-      </div>
-    </body>
+                <p className="mt-2">
+                  Already have an account?
+                  <Link to="/login" className="text-decoration-none">
+                    {" "}
+                    Sign in
+                  </Link>
+                </p>
+              </div>
+            </form>
+          );
+        }}
+      </Formik>
+    </>
   );
 };
