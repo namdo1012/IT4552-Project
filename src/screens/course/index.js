@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
 import { ProgressBar, ListGroup } from "react-bootstrap";
@@ -11,7 +11,7 @@ import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
 
 export const Course = () => {
-  const [course, setCourse] = useState("N1");
+  const [course, setCourse] = useState("");
   const [less, setLess] = useState(null);
   const [currentSelectBtn, setCurrentSelectBtn] = useState(0);
   const { history } = useSelector((state) => state.history);
@@ -37,6 +37,7 @@ export const Course = () => {
   ];
   console.log(less);
   console.log(history);
+
   const getProcess = (btnCourse) => {
     setCourse(btnCourse); // lay name N5,N4...
     const db = firebase.doc(`/User/abcxyz/History/${btnCourse}`);
@@ -51,6 +52,10 @@ export const Course = () => {
       }
     });
   };
+
+  useEffect(() => {
+    if (course === "") getProcess("N5")
+  },[])
 
   return (
     <>
