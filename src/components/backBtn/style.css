@@ -2,6 +2,21 @@
   display: flex;
   border: none;
   background-color: transparent;
+  padding: 2px 12px;
+  border-radius: 10px;
+  padding-left: 5px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.turn-back-button:hover {
+  background-color: #f27a54;
+  transform: translateY(-2px);
+}
+
+.turn-back-button:active {
+  border: none;
+  outline: none;
 }
 
 .turn-back--icon {
