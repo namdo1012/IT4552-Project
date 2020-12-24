@@ -23,26 +23,29 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+<div align="center">
+  <a href="https://sun-japanese-learning-git-master.namdo1012.vercel.app/">
+    <div>
+    <img src="https://cdn3.iconfinder.com/data/icons/meteocons/512/sun-symbol-512.png" alt="Logo" width="80" height="80">
+    </div>
+    BT NIHONGO
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <!-- <h3 align="center">Best-README-Template</h3> -->
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An awesome funniest Japanese learning website for you! 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/namdo1012/IT4552-Project"><strong>Check our source codes!</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://sun-japanese-learning-git-master.namdo1012.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/namdo1012/IT4552-Project/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/namdo1012/IT4552-Project/issues">Request Feature</a>
   </p>
-</p>
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -74,27 +77,36 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+# <p align="center"> BT Nihongo | Responsive Japanese Learning Website </p>
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+[![Product Name Screen Shot][product-screenshot]](https://sun-japanese-learning-git-master.namdo1012.vercel.app/)
 
-Here's why:
+This is a online course learning website for anyone want to improve self Japanese skills. It is full front-end and back-end website that provides visitors with:
 
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should element DRY principles to the rest of your life :smile:
+1. Learning Japanese in all skills: reading, listening, grammar and JLPT test. 😎😎😎
+2. Have fun with 100+ Japanese videos from Youtube sources. 🤩🤩🤩
+3. Download all greatest needed documents and books for learning Japanese. 🤑🤑🤑
+4. Follow many great and fun articles and blogs about Japan. 🤯🤯🤯
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+A demo of this site is available [here](https://sun-japanese-learning-git-master.namdo1012.vercel.app/).
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+This website is hosted by [Vercel](https://vercel.com/) - a cloud platform for serverless deployment.
 
-### Built With
+## Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
-- [Laravel](https://laravel.com)
+### Front-end
+
+- [Redux](https://redux.js.org/) : A Predictable State Container for JS Apps
+- [ReactJs](https://reactjs.org/) : A JavaScript library for building user interfaces
+- [React-Router](https://reactrouter.com/) : Navigation config route for React Apps
+- [React-Icons](https://react-icons.github.io/react-icons/) : All icons you need for React Apps
+- [React-Bootstrap](https://react-bootstrap.github.io/) : Libary based on bootstrap
+
+### Back-end
+
+- [Firebase](https://firebase.google.com/) : Tool for quickly build a runtime server
 
 <!-- GETTING STARTED -->
 
@@ -105,37 +117,67 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+This is all you need to run this website locally:
 
 - npm
+
   ```sh
   npm install npm@latest -g
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+- If you wish to run this site locally:
+
+  Clone or download this repo.
+
+  ```sh
+  git clone https://github.com/namdo1012/IT4552-Project.git
+  ```
+
+  Navigate to IT4552-Project on your computer and install all packages needed for project:
+
+  ```sh
+  npm i || npm install || yarn install
+  ```
+
+  Start deploy project locally:
+
+  ```sh
+  npm start
+  ```
+
+  After all, your website will run at this url: https://localhost:3000
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here are some main reasons you should use this website
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Create your own account to save learning process
 
+<br />
+<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+
+### Learning grammar, vocabulary, kanji and reading
+
+<br />
+<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+
+### Watch Japan Anime Videos
+
+<br />
+<img src="readme_asset/img/vocabulary-page.png"/>
+
+### Testing with all our tests
+
+<br />
+<img src="readme_asset/img/vocabulary-page.png"/>
 <!-- ROADMAP -->
 
 ## Roadmap
@@ -164,7 +206,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Đỗ Quang Nam - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+Nguyễn Bách Tùng - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+Lê Nhật Huy - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+Nguyễn Minh Hiếu - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
@@ -199,4 +247,4 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: readme_asset/img/landing_page.jpg
