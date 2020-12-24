@@ -5,7 +5,7 @@ import "./style.css";
 import * as ROUTES from "../../constant/routes";
 import { ProgressBar, ListGroup } from "react-bootstrap";
 import {firebaseAuth, firestore} from "../../services/firebase/firebase";
-import { Link,Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { TotalCard } from "../../components/TotalCard";
 
 import { useDispatch, useSelector } from "react-redux";
