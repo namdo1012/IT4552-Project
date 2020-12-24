@@ -7,7 +7,6 @@ import { ProgressBar, ListGroup } from "react-bootstrap";
 import {firebaseAuth, firestore} from "../../services/firebase/firebase";
 import { Link, Redirect } from "react-router-dom";
 import { TotalCard } from "../../components/TotalCard";
-
 import { useDispatch, useSelector } from "react-redux";
 import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
