@@ -2,6 +2,7 @@
 import React, { useState,useEffect,useCallback } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
+import * as ROUTES from "../../constant/routes";
 import { ProgressBar, ListGroup } from "react-bootstrap";
 import {firebaseAuth, firestore} from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
@@ -12,6 +13,7 @@ import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
 
 export const Course = () => {
+  const auth = useSelector((state) => state.auth);
   const [course, setCourse] = useState("");
   const [less, setLess] = useState(null);
   const [currentSelectBtn, setCurrentSelectBtn] = useState(0);
@@ -84,12 +86,13 @@ export const Course = () => {
     addHistory()
   },[])
 
+  if (!auth.authenticated) return <Redirect to={ROUTES.SIGN_IN} />;
+
   return (
     <>
       {/*<NavBar/>*/}
       <NavBar
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
-        type="mainpage"
       />
 
       {/*Level*/}
