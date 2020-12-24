@@ -133,8 +133,10 @@ Here are some main reasons you should use this website
 ### Create your own account to save learning process
 
 <br />
+<div>
 <img align="left" width="48%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/login-page.png"/>
 <img align="right" width="48%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/signup-page.png"/>
+<div>
 
 ### Learning grammar, vocabulary, kanji and reading
 
