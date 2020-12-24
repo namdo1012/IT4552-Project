@@ -2,9 +2,12 @@
 import React from "react";
 import "./style.css";
 // import {addNewLesson, dbN5, getDataLesson} from "../../services/firebase/tutorial.service";
-import firebase from "../../services/firebase/firebase";
+import {firestore, firebaseAuth} from "../../services/firebase/firebase";
 
 export const Demo = () => {
+  const UID = firebaseAuth.currentUser?.uid;
+  console.log(UID);
+
   const addHistory = (id) => {
     let obj = {
       L1: { data: [], process: 0 },
@@ -14,7 +17,7 @@ export const Demo = () => {
       L5: { data: [], process: 0 },
     };
     for (let i = 1; i < 6; i++) {
-      firebase.doc(`User/${id}/History/N${i}`).set(obj);
+      firestore.doc(`User/${id}/History/N${i}`).set(obj);
     }
   };
 

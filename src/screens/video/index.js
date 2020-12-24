@@ -3,7 +3,7 @@ import "./style.css";
 import Filter from "../../components/Filter";
 import { NavBar } from "../../components/NavBar";
 import VideoCard from "../../components/VideoCard";
-import firebase from "../../services/firebase/firebase";
+import { firestore } from "../../services/firebase/firebase";
 
 const listFilter = [
   {
@@ -33,7 +33,7 @@ export const Video = () => {
   const [checkVideos, setCheckVideos] = useState([]);
 
   const getVideos = () => {
-    let db = firebase.doc(`Video/All`);
+    let db = firestore.doc(`Video/All`);
     db.get().then((doc) => {
       if (doc.exists) {
         let data = doc.data()["videos"];
