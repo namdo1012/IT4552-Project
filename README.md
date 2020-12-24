@@ -133,8 +133,8 @@ Here are some main reasons you should use this website
 ### Create your own account to save learning process
 
 <br />
-<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
-<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="48%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/login-page.png"/>
+<img align="right" width="48%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/signup-page.png"/>
 
 ### Learning grammar, vocabulary, kanji and reading
 
@@ -182,13 +182,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact 🌎🌎🌎
 
 <div style="display:flex; align-items: center">
-<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="https://avatars1.githubusercontent.com/u/42694408?s=400&u=4efb12edd2982ea4e7be779e06df578bdc40c122&v=4"/>
 
 Đỗ Quang Nam - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
 </div>
 <div style="display:flex; align-items: center">
-<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="https://avatars1.githubusercontent.com/u/50869025?s=400&u=ef87e2f9e4319330b2aae3dddf32a5e0b1ea4f43&v=4"/>
 
 Nguyễn Bách Tùng - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
@@ -200,7 +200,7 @@ Lê Nhật Huy - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
 </div>
 <div style="display:flex; align-items: center">
-<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="https://avatars1.githubusercontent.com/u/34300862?s=400&u=a9fa3aa9311b6a81eeff06432e955c70073560b2&v=4"/>
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="https://avatars0.githubusercontent.com/u/59738292?s=400&u=5eb4cb3489cd5135c7ed6ac84fe1124321692d35&v=4"/>
 
 Nguyễn Minh Hiếu - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
@@ -212,7 +212,7 @@ Lê Nhật Huy - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
 Nguyễn Minh Hiếu - [namdo10121999@gmail.com](namdo10121999@gmail.com) -->
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/namdo1012/IT4552-Project](https://github.com/namdo1012/IT4552-Project)
 
 <!-- ACKNOWLEDGEMENTS -->
 
