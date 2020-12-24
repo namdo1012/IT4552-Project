@@ -76,7 +76,6 @@ export const Course = () => {
           }
         }
       }).then(() => {if (course === "") getProcess("N5")})
-      // if (course === "") getProcess("N5")
     }
   },[])
 
