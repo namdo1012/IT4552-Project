@@ -4,7 +4,7 @@ import { Grammar } from "../grammar";
 import { Vocabulary } from "../vocabulary";
 import { Reading } from "../reading";
 import { Test } from "../test";
-import { firestore } from "../../../services/firebase/firebase";
+import {firebaseAuth, firestore} from "../../../services/firebase/firebase";
 import { addLesson } from "../../../states/actions/historyCourse";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -15,9 +15,10 @@ export const Temp = (props) => {
     ?.data;
   let checkTypeLess = idLesson.slice(0, 1);
   const [dataLesson, setDataLesson] = useState(null);
+  const UID = firebaseAuth.currentUser?.uid;
 
   const done = () => {
-    let db = firestore.doc(`User/abcxyz/History/${stateCourse}`);
+    let db = firestore.doc(`User/${UID}/History/${stateCourse}`);
     let tmp = [...dataHistory, idLesson];
     let updateProcess = parseFloat(((tmp.length / 8) * 100).toFixed(2));
     db.update({
