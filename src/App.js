@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import * as ROUTES from "./constant/routes";
 
 import { SignInPage } from "./screens/signIn";
 import { SignUpPage } from "./screens/signUp";
@@ -17,11 +18,11 @@ function App() {
     <>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/login" component={SignInPage} />
-          <Route exact path="/signup" component={SignUpPage} />
-          <Route exact path="/videos" component={Video} />
-          <Route exact path="/references" component={References} />
-          <Route exact path="/course" component={Course} />
+          <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
+          <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
+          <Route exact path={ROUTES.VIDEOS} component={Video} />
+          <Route exact path={ROUTES.REFERENCES} component={References} />
+          <Route exact path={ROUTES.COURSE} component={Course} />
           <Route
             exact
             path="/course/:stateCourse/:id"
@@ -32,7 +33,7 @@ function App() {
             path="/course/:stateCourse/:id/:typeLesson"
             component={Temp}
           />
-          <Route exact path="/" component={LandingPage} />
+          <Route exact path={ROUTES.LANDING} component={LandingPage} />
         </Switch>
       </BrowserRouter>
     </>
