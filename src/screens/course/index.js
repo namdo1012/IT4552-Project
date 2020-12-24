@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
 import { ProgressBar, ListGroup } from "react-bootstrap";
-import firebase from "../../services/firebase/firebase";
+import { firestore } from "../../services/firebase/firebase";
 import { Link } from "react-router-dom";
 import { TotalCard } from "../../components/TotalCard";
 
@@ -40,7 +40,7 @@ export const Course = () => {
 
   const getProcess = (btnCourse) => {
     setCourse(btnCourse); // lay name N5,N4...
-    const db = firebase.doc(`/User/abcxyz/History/${btnCourse}`);
+    const db = firestore.doc(`/User/abcxyz/History/${btnCourse}`);
     db.get().then((doc) => {
       if (doc.exists) {
         let data = doc.data();

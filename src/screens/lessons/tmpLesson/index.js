@@ -4,7 +4,7 @@ import { Grammar } from "../grammar";
 import { Vocabulary } from "../vocabulary";
 import { Reading } from "../reading";
 import { Test } from "../test";
-import firebase from "../../../services/firebase/firebase";
+import { firestore } from "../../../services/firebase/firebase";
 import { addLesson } from "../../../states/actions/historyCourse";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -17,7 +17,7 @@ export const Temp = (props) => {
   const [dataLesson, setDataLesson] = useState(null);
 
   const done = () => {
-    let db = firebase.doc(`User/abcxyz/History/${stateCourse}`);
+    let db = firestore.doc(`User/abcxyz/History/${stateCourse}`);
     let tmp = [...dataHistory, idLesson];
     let updateProcess = parseFloat(((tmp.length / 8) * 100).toFixed(2));
     db.update({
@@ -42,7 +42,7 @@ export const Temp = (props) => {
       }
     })();
     console.log("type", typeLesson);
-    let db = firebase.doc(`Course/${stateCourse}/${stateLesson}/${typeLesson}`);
+    let db = firestore.doc(`Course/${stateCourse}/${stateLesson}/${typeLesson}`);
     db.get().then((doc) => {
       if (doc.exists) {
         let data = doc.data()[idLesson];

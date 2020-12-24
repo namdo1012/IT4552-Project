@@ -3,7 +3,7 @@ import "./style.css";
 import Filter from "../../components/Filter";
 import { NavBar } from "../../components/NavBar";
 import DocumentCard from "../../components/DocumentCard";
-import firebase from "../../services/firebase/firebase";
+import { firestore } from "../../services/firebase/firebase";
 
 const listFilter = [
   {
@@ -33,7 +33,7 @@ export const References = () => {
   const [checkReferences, setCheckReferences] = useState([]);
 
   const getReferences = () => {
-    let db = firebase.doc(`References/All`);
+    let db = firestore.doc(`References/All`);
     db.get().then((doc) => {
       if (doc.exists) {
         let data = doc.data()["documents"];

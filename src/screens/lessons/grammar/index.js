@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "./style.css";
-
-import { Link } from "react-router-dom";
-import { ImHome } from "react-icons/im";
+import { BackBtn } from "../../../components/backBtn";
 
 import GrammarImage from "./grammar-img.png";
 
@@ -12,10 +10,10 @@ export const Grammar = ({ doneLesson, dataLesson }) => {
   return (
     <>
       <div className="header">
-        <Link to="/course" className="btn btn-warning">
-          <ImHome className="mr-2" />
-          Home
-        </Link>
+        <BackBtn style={{ marginTop: "50px" }} dest="/course">
+          {" "}
+          Back to course{" "}
+        </BackBtn>
       </div>
       <div className="content container-fluid text-center">
         <h3 className="inline-block mb-3">

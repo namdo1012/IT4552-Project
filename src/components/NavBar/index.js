@@ -75,6 +75,7 @@ export const NavBar = ({ style, type }) => {
             style={{
               color: style.color,
               outline: `${style.outlineColor} solid 2px`,
+              borderRadius: 0,
             }}
           >
             Đăng Nhập
