@@ -46,7 +46,6 @@ export const DetailCourse = (props) => {
       {/*<NavBar/>*/}
       <NavBar
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
-        type="mainpage"
       />
 
       <div className="page__gap" />

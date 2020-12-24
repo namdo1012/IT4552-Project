@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { NavBar } from "../../components/NavBar";
+import * as ROUTES from "../../constant/routes";
 
 import { useDispatch, useSelector } from "react-redux";
 import { signIn } from "../../states/actions/auth";
@@ -11,13 +12,12 @@ export const SignInPage = () => {
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
-  if (auth.authenticated) return <Redirect to="/course" />;
+  if (auth.authenticated) return <Redirect to={ROUTES.COURSE} />;
 
   return (
     <>
       <NavBar
         style={{ backgroundColor: "#fff", color: "#000", outlineColor: "#000" }}
-        type="mainpage"
       />
       <Formik
         initialValues={{ email: "", password: "" }}
