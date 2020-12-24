@@ -1,26 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -30,8 +7,6 @@
     </div>
     BT NIHONGO
   </a>
-
-  <!-- <h3 align="center">Best-README-Template</h3> -->
 
   <p align="center">
     An awesome funniest Japanese learning website for you! 
@@ -75,7 +50,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Project 🐱‍🏍🐱‍🏍🐱‍🏍
 
 # <p align="center"> BT Nihongo | Responsive Japanese Learning Website </p>
 
@@ -92,7 +67,7 @@ A demo of this site is available [here](https://sun-japanese-learning-git-master
 
 This website is hosted by [Vercel](https://vercel.com/) - a cloud platform for serverless deployment.
 
-## Built With
+## Built With 🦴🦴🦴
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
@@ -110,7 +85,7 @@ This section should list any major frameworks that you built your project using.
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+## Getting Started 👀👀👀
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
@@ -151,42 +126,42 @@ This is all you need to run this website locally:
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+## Usage 🚀🚀🚀
 
 Here are some main reasons you should use this website
 
 ### Create your own account to save learning process
 
 <br />
-<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
-<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
 
 ### Learning grammar, vocabulary, kanji and reading
 
 <br />
-<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
-<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
-<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
-<img width="48%" height="400px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/grammar-page.png"/>
+<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/reading-page.png"/>
+<img width="40%" height="200px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 10px; margin-bottom: 10px" src="readme_asset/img/testing-page.png"/>
 
 ### Watch Japan Anime Videos
 
 <br />
-<img src="readme_asset/img/vocabulary-page.png"/>
+<img src="readme_asset/img/videos-page.png"/>
 
-### Testing with all our tests
+### Get all FREE books for learning
 
 <br />
-<img src="readme_asset/img/vocabulary-page.png"/>
+<img src="readme_asset/img/reference-page.png"/>
 <!-- ROADMAP -->
 
-## Roadmap
+## Roadmap 🚙🚙🚙
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/namdo1012/IT4552-Project/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
-## Contributing
+## Contributing 🚩🚩🚩
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -198,53 +173,58 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- LICENSE -->
 
-## License
+## License 💧💧💧
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 
-## Contact
+## Contact 🌎🌎🌎
+
+<div style="display:flex; align-items: center">
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
 
 Đỗ Quang Nam - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
+</div>
+<div style="display:flex; align-items: center">
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="readme_asset/img/vocabulary-page.png"/>
+
 Nguyễn Bách Tùng - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+</div>
+<div style="display:flex; align-items: center">
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="https://avatars1.githubusercontent.com/u/34300862?s=400&u=a9fa3aa9311b6a81eeff06432e955c70073560b2&v=4"/>
 
 Lê Nhật Huy - [namdo10121999@gmail.com](namdo10121999@gmail.com)
 
+</div>
+<div style="display:flex; align-items: center">
+<img width="32px" height="32px" alt="NamDo's Viblo" style="margin-right: 10px; border-radius: 50%; margin-bottom: 10px" src="https://avatars1.githubusercontent.com/u/34300862?s=400&u=a9fa3aa9311b6a81eeff06432e955c70073560b2&v=4"/>
+
 Nguyễn Minh Hiếu - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+</div>
+
+<!-- Nguyễn Bách Tùng - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+Lê Nhật Huy - [namdo10121999@gmail.com](namdo10121999@gmail.com)
+
+Nguyễn Minh Hiếu - [namdo10121999@gmail.com](namdo10121999@gmail.com) -->
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## Acknowledgements
+## Acknowledgements 🥓🥓🥓
 
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Img Shields](https://shields.io)
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Pages](https://pages.github.com)
-- [Animate.css](https://daneden.github.io/animate.css)
-- [Loaders.css](https://connoratherton.com/loaders)
-- [Slick Carousel](https://kenwheeler.github.io/slick)
-- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-- [Sticky Kit](http://leafo.net/sticky-kit)
-- [JVectorMap](http://jvectormap.com)
+- [GitHub Readme Markdown ](https://guides.github.com/features/mastering-markdown/)
+- [Vercel](https://vercel.com/dashboard)
+- [Formik](https://formik.org/)
+- [Bootstrap.css](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: readme_asset/img/landing_page.jpg
