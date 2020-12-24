@@ -53,6 +53,7 @@ export const Course = () => {
     });
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (course === "") getProcess("N5")
   },[])
