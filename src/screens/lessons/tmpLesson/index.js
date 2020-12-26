@@ -42,7 +42,6 @@ export const Temp = (props) => {
           return;
       }
     })();
-    console.log("type", typeLesson);
     let db = firestore.doc(`Course/${stateCourse}/${stateLesson}/${typeLesson}`);
     db.get().then((doc) => {
       if (doc.exists) {
