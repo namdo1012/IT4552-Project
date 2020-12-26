@@ -94,7 +94,7 @@ export const Course = () => {
 
   if (!currentUser) return <Redirect to={ROUTES.SIGN_IN} />;
   else if (loading === false) return <Loading/>
-  return (
+  else return (
     <>
       {/*<NavBar/>*/}
       <NavBar
