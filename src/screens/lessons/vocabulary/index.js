@@ -186,7 +186,7 @@ class Vocabulary extends React.Component {
         </div>
         <div className="done-bar fixed-bottom d-flex justify-content-center">
           <button
-            // onClick={doneLesson}
+            onClick={this.props.doneLesson}
             className="btn btn-success my-3 px-5 rounded-pill"
           >
             Hoàn Thành

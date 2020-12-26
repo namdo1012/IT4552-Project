@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { NavBar } from "../../components/NavBar";
 import * as ROUTES from "../../constant/routes";
+import { AuthContext } from "../../services/auth";
 
 import { useDispatch, useSelector } from "react-redux";
 import { signIn } from "../../states/actions/auth";
@@ -11,8 +12,9 @@ import { signIn } from "../../states/actions/auth";
 export const SignInPage = () => {
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const { currentUser } = useContext(AuthContext);
 
-  if (auth.authenticated) return <Redirect to={ROUTES.COURSE} />;
+  if (currentUser) return <Redirect to={ROUTES.COURSE} />;
 
   return (
     <>
@@ -112,7 +114,7 @@ export const SignInPage = () => {
                 />
                 <p className="mt-2">
                   Bạn chưa có tài khoản?
-                  <Link to="/signup" className="text-decoration-none">
+                  <Link to={ROUTES.SIGN_UP} className="text-decoration-none">
                     {" "}
                     Đăng ký ngay
                   </Link>

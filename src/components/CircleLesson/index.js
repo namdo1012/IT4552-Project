@@ -4,7 +4,7 @@ import {CgFileDocument} from "react-icons/cg/index";
 export const CircleLesson = ({checkDone, id}) => {
     return (
         <div style={{
-            height: 100, width: 100, borderRadius: 50, backgroundColor: checkDone?.includes(id) ? 'red' : 'white',
+            height: 100, width: 100, borderRadius: 50, backgroundColor: checkDone?.includes(id) ? '#00FA9A' : 'white',
             alignItems: 'center', justifyContent: 'center', display: 'flex',
             marginRight: 20
         }}>
@@ -15,7 +15,7 @@ export const CircleLesson = ({checkDone, id}) => {
             }}>
                 <CgFileDocument style={{
                     alignSelf: 'center',
-                    fontSize: 50, color: checkDone?.includes(id) ? 'red' : 'white'
+                    fontSize: 50, color: checkDone?.includes(id) ? '#00FA9A' : 'white'
                 }}/>
             </div>
         </div>
