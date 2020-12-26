@@ -12,13 +12,13 @@ const Question = ({ id, question, setAnswer, answer, result }) => {
   const checkColor = (type) => {
     if (
       answer.find((item) => item.value === type && item.id === id) &&
-      question?.correctAnswer === type &&
+      question?.correct_answer === type &&
       result
     )
       return "#28a745";
     if (answer.find((item) => item.value === type && item.id === id) && result)
       return "#eb4d4b";
-    if (question?.correctAnswer === type && result) return "#28a745";
+    if (question?.correct_answer === type && result) return "#28a745";
     else return "#000000";
   };
 
