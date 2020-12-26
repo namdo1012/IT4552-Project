@@ -19,7 +19,7 @@ export const NavBar = ({ style }) => {
       variant="dark"
     >
       <Navbar.Brand
-        href="#home"
+        href={auth.authenticated ? ROUTES.COURSE : ROUTES.LANDING}
         className="app__logo"
         style={{ color: style.color }}
       >
@@ -27,12 +27,7 @@ export const NavBar = ({ style }) => {
           className="app__icon"
           style={{ color: style.color }}
         />
-        <Link
-          to={auth.authenticated ? ROUTES.COURSE : ROUTES.LANDING}
-          style={{ color: style.color }}
-        >
-          BT Nihongo
-        </Link>
+        BT Nihongo
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
