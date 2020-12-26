@@ -1,15 +1,15 @@
 import { Navbar, Nav, Button } from "react-bootstrap";
 import { BsFillBrightnessHighFill } from "react-icons/bs";
-import React from "react";
+import React, { useContext } from "react";
 import "./style.css";
-import { useSelector } from "react-redux";
 import * as ROUTES from "../../constant/routes";
+import { AuthContext } from "../../services/auth";
+
 import { Link } from "react-router-dom";
 import { signOut } from "../../states/actions/auth";
 
 export const NavBar = ({ style }) => {
-  const auth = useSelector((state) => state.auth);
-
+  const { currentUser } = useContext(AuthContext);
   return (
     <Navbar
       style={{ ...style }}
@@ -19,7 +19,7 @@ export const NavBar = ({ style }) => {
       variant="dark"
     >
       <Navbar.Brand
-        href={auth.authenticated ? ROUTES.COURSE : ROUTES.LANDING}
+        href={currentUser !== null ? ROUTES.COURSE : ROUTES.LANDING}
         className="app__logo"
         style={{ color: style.color }}
       >
@@ -71,7 +71,7 @@ export const NavBar = ({ style }) => {
           </Nav.Link>
         </Nav>
 
-        {!auth.authenticated ? (
+        {currentUser === null ? (
           <Link to={ROUTES.SIGN_IN}>
             <Button
               variant="outline-secondary"

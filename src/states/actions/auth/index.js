@@ -21,13 +21,3 @@ export const signIn = (user) => {
 export const signOut = () => {
   firebaseAuth.signOut().then(() => store.dispatch({ type: SIGN_OUT }));
 };
-
-export const verifyAuth = () => {
-  firebaseAuth.onAuthStateChanged((user) => {
-    if (user) {
-      store.dispatch({ type: AUTH_SUCCESS });
-    } else {
-      store.dispatch(signOut());
-    }
-  });
-};

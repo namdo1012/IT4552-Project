@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import * as ROUTES from "./constant/routes";
+import { AuthProvider } from "./services/auth";
 
 import { SignInPage } from "./screens/signIn";
 import { SignUpPage } from "./screens/signUp";
@@ -15,7 +16,7 @@ import { Temp } from "./screens/lessons/tmpLesson";
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
         <Switch>
           <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -36,7 +37,7 @@ function App() {
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
         </Switch>
       </BrowserRouter>
-    </>
+    </AuthProvider>
   );
 }
 

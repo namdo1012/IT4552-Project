@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState,useEffect,useCallback } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
 import * as ROUTES from "../../constant/routes";
+import { AuthContext } from "../../services/auth";
+
 import { ProgressBar, ListGroup } from "react-bootstrap";
-import {firebaseAuth, firestore} from "../../services/firebase/firebase";
+import { firestore } from "../../services/firebase/firebase";
 import { Link, Redirect } from "react-router-dom";
 import { TotalCard } from "../../components/TotalCard";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +14,6 @@ import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
 
 export const Course = () => {
-  const auth = useSelector((state) => state.auth);
   const [course, setCourse] = useState("");
   const [less, setLess] = useState(null);
   const [currentSelectBtn, setCurrentSelectBtn] = useState(0);
@@ -21,7 +22,8 @@ export const Course = () => {
     (t, { process }) => t + process * 0.2,
     0
   );
-  const UID = firebaseAuth.currentUser?.uid
+  const { currentUser } = useContext(AuthContext);
+  const UID = currentUser?.uid;
 
   const dispatch = useDispatch();
   const level = [
@@ -38,8 +40,8 @@ export const Course = () => {
     { id: "L4", name: "Buổi học số 4" },
     { id: "L5", name: "Buổi học số 5" },
   ];
-  console.log(less);
-  console.log(history);
+  // console.log(less);
+  // console.log(history);
 
   const getProcess = (btnCourse) => {
     setCourse(btnCourse); // lay name N5,N4...
@@ -64,28 +66,31 @@ export const Course = () => {
       L4: { data: [], process: 0 },
       L5: { data: [], process: 0 },
     };
-    if(UID) {
+    if (UID) {
       const db = firestore.doc(`/User/${UID}/History/N1`);
-      db.get().then((doc) => {
-        if (doc.exists){
-          console.log('exist',UID)
-        }
-        else {
-          console.log('not',UID,doc)
-          for (let i = 1; i < 6; i++) {
-            firestore.doc(`User/${UID}/History/N${i}`).set(obj)
+      db.get()
+        .then((doc) => {
+          if (doc.exists) {
+            // console.log('exist',UID)
+          } else {
+            // console.log('not',UID,doc)
+            for (let i = 1; i < 6; i++) {
+              firestore.doc(`User/${UID}/History/N${i}`).set(obj);
+            }
           }
-        }
-      }).then(() => {if (course === "") getProcess("N5")})
+        })
+        .then(() => {
+          if (course === "") getProcess("N5");
+        });
     }
-  },[])
+  }, []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    addHistory()
-  },[])
+    addHistory();
+  }, []);
 
-  if (!auth.authenticated) return <Redirect to={ROUTES.SIGN_IN} />;
+  if (!currentUser) return <Redirect to={ROUTES.SIGN_IN} />;
 
   return (
     <>
