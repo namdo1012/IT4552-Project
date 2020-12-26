@@ -12,11 +12,13 @@ import { TotalCard } from "../../components/TotalCard";
 import { useDispatch, useSelector } from "react-redux";
 import { storeHistory } from "../../states/actions/historyCourse";
 import { AiFillCaretDown } from "react-icons/ai";
+import {Loading} from "../../components/Loading";
 
 export const Course = () => {
   const [course, setCourse] = useState("");
   const [less, setLess] = useState(null);
   const [currentSelectBtn, setCurrentSelectBtn] = useState(0);
+  const [loading,setLoading] = useState(false)
   const { history } = useSelector((state) => state.history);
   const total = Object.values(history).reduce(
     (t, { process }) => t + process * 0.2,
@@ -81,7 +83,7 @@ export const Course = () => {
         })
         .then(() => {
           if (course === "") getProcess("N5");
-        });
+        }).then(() => setLoading(true));
     }
   }, []);
 
@@ -91,7 +93,7 @@ export const Course = () => {
   }, []);
 
   if (!currentUser) return <Redirect to={ROUTES.SIGN_IN} />;
-
+  else if (loading === false) return <Loading/>
   return (
     <>
       {/*<NavBar/>*/}
