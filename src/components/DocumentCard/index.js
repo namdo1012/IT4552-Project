@@ -8,13 +8,13 @@ const DocumentCard = ({ cover, title, linkDownload }) => {
         className="card rounded references__card"
         style={{ maxWidth: "540px" }}
       >
-        <div className="row no-gutters">
+        <div className="row no-gutters" style={{ height: "100%" }}>
           <div className="col-sm-5">
             <img
               src={cover}
               className="card-img p-3"
               alt={title}
-              style={{ height: "100%" }}
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </div>
           <div className="col-sm-7">

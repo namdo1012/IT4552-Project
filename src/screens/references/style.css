@@ -8,6 +8,7 @@
 
 .references__card {
   transition: 0.2s;
+  height: 200px;
 }
 
 .references__card:hover {
